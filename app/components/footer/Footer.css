@@ -1,0 +1,73 @@
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 15rem;
+	align-items: center;
+	padding: 2rem 4rem;
+	background-color: var(--lightpink);
+}
+
+.logo {
+	max-height: 100%;
+	height: auto;
+	width: auto;
+	grid-column: 1/2;
+	margin: 0 auto;
+}
+
+.lonorBcontainer {
+	grid-column: 2/3;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	line-height: 5rem;
+	margin-top: 4rem;
+}
+
+.leonorB {
+	font-family: "Tangerine";
+	font-size: 12rem;
+	margin: 0;
+	padding: 0;
+}
+
+.onlineHomeopath {
+	background-color: transparent;
+	color: var(--darkgray);
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
+}
+
+.book {
+	grid-column: 3/4;
+	background: transparent;
+	transition: all 300ms;
+}
+
+.book:hover {
+	transform: scale(1.05);
+	font-weight: bold;
+}
+
+.icons {
+	grid-column: 4/5;
+	display: flex;
+	width: 100%;
+	gap: 2rem;
+}
+
+.icon {
+    transition: all 400ms;
+    filter: grayscale(100%);
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+

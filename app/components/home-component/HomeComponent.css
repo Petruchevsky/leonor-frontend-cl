@@ -1,0 +1,47 @@
+.container {
+    display: grid;
+    grid-template-areas: 
+    "welcome welcome welcome welcome"
+    "hhch hhch tsw tsw"
+    "about about about selfie";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
+.container section {
+    text-align: justify;
+    padding: 2rem;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.welcome {
+    grid-area: welcome;
+
+}
+
+.hhch {
+    grid-area: hhch;
+
+}
+
+.tsw {
+    grid-area: tsw;
+
+}
+
+.about {
+    grid-area: about;
+
+}
+
+.selfie {
+    grid-area: selfie;
+    justify-self: center;
+    border-radius: 10px;
+}

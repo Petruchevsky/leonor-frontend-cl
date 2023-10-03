@@ -9,15 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/red-hat-display": "^5.0.13",
+    "@fontsource/red-hat-mono": "^5.0.8",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "typeface-raleway": "^1.1.13",
+    "typeface-tangerine": "^1.1.13"
   },
   "devDependencies": {
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
   }
 }
