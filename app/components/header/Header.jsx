@@ -2,7 +2,7 @@
 import Image from "next/image";
 import fetchHandler from "@/utils/fetchHandler";
 import { useEffect, useState } from "react";
-import "./header.css";
+import "./Header.css";
 
 const getHome = async () => {
 	try {
