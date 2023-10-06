@@ -1,17 +1,205 @@
 header {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 15rem;
+   display: flex;
+   justify-content: space-evenly;
    align-items: center;
-   padding: 2rem 4rem;
+   padding: 2rem 0;
+   width: 100%;
+   margin: 0 auto;
 }
 
 .logo {
    max-height: 100%;
    height: auto;
+   width: 18rem;
+   margin: 0;
+}
+
+.lonorBcontainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   line-height: 5.5rem;
+   margin: 5rem 0 0 18rem;
+ }
+
+.leonorB {
+   font-family: 'Tangerine';
+   font-size: 16rem;
+   padding: 0;
+}
+
+.onlineHomeopath {
+   font-size: 3rem;
+   background-color: transparent;
+   color: var(--darkgray);
+   font-weight: 300;
+   padding: 0;
+   margin: 0;
+}
+
+.search {
    width: auto;
+}
+
+.bookHeader {
+   font-size: 2.6rem;
+   transition: all 400ms;
+   background-color: var(--pink);
+}
+
+.bookHeader:hover {
+	word-spacing: .7rem;
+    transform: scale(1.1);
+	font-weight: 600;
+}
+
+.bookHeader span {
+	padding: 0 .9rem;
+	color: white;
+	font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+
+/* Estilos para Pantallas Grandes */
+@media (max-width:1900px) and (min-width:1101px) {
+
+   header {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 1rem 0 0;
+      width: 100%;
+   }
+
+   .logo {
+      width: 12rem;
+   }
+
+   .lonorBcontainer {
+      line-height: 4rem;
+      margin: 3rem 0 0 14rem;
+    }
+
+   .leonorB {
+      font-size: 10rem;
+
+   }
+
+   .onlineHomeopath {
+      font-size: 2rem;
+   }
+
+   .bookHeader {
+      font-size: 2.2rem;
+      transition: all 400ms;
+      background-color: var(--pink);
+   }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+
+/* Estilos para Pantallas Medianas */
+@media (max-width:1100px) and (min-width:601px) {
+
+   header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      padding: 0 2rem;
+      width: 100%;
+   }
+
+   .logo {
+      display: none;
+   }
+
+   .lonorBcontainer {
+      line-height: 3rem;
+      margin: 4rem 0 1rem 0;
+    }
+
+   .leonorB {
+      font-size: 7rem;
+
+   }
+
+   .onlineHomeopath {
+      font-size: 1.7rem;
+      margin-bottom: 2rem;
+   }
+
+   .search {
+      width: auto;
+   }
+
+   .bookHeader {
+      font-size: 1.8rem;
+      transition: all 400ms;
+      background-color: var(--pink);
+   }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------*/
+
+
+/* Estilos para Móviles */
+@media (max-width:600px) {
+
+   header {
+      display: flex;
+      justify-content: space-around;
+      gap: 0;
+      align-items: center;
+      padding: .5rem 1rem .5rem 0;
+      width: 100%;
+   }
+
+   .logo {
+      width: 6rem;
+   }
+
+   .lonorBcontainer {
+      display: none;
+   }
+
+   .search {
+      width: auto;
+   }
+
+   .bookHeader {
+      font-size: 1.6rem;
+      transition: all 400ms;
+      background-color: var(--pink);
+   }
+
+}
+
+
+
+
+/* header {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 15rem;
+   align-items: center;
+   padding: 2rem 0;
+   width: 80%;
+   margin: 0 auto;
+}
+
+.logo {
    grid-column: 1/2;
-   justify-self: left;
+   max-height: 100%;
+   height: auto;
+   width: auto;
+   margin-right: 45%;
 }
 
 .lonorBcontainer {
@@ -23,10 +211,6 @@ header {
    line-height: 5rem;
    margin-top: 4rem;
  }
-
-header form {
-   text-align: end;
-} 
 
 .leonorB {
    font-family: 'Tangerine';
@@ -45,6 +229,6 @@ header form {
 
 .search {
    grid-column: 3/4;
-   justify-self: left;
-
-}
+   justify-self: center;
+   margin-right: 17rem;
+} */

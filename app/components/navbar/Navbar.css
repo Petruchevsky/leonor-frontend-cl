@@ -1,28 +1,96 @@
+/* Estilos para pantallas XXXL */
+@media (min-width:1901px) {
+
+	.menu {
+		gap: 5rem;
+		width: 80%;
+	}
+
+	nav ul li a {
+		font-size: 3rem;
+	}
+
+	nav ul li span {
+		font-size: 3rem;
+	}
+
+	.dropdownButton {
+		font-size: 2.2rem !important;
+	}
+
+	.dropdown li a {
+		font-size: 2.5rem !important;
+	}
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+nav {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5rem;
+	padding: 1rem 0;
+	border-top: solid 1px var(--pink);
+	border-bottom: solid 1px var(--pink);
+	position: relative;
+}
+
+.menu {
+	position: relative;
+}
 
 nav ul {
-	display: grid;
-	grid-template-columns: repeat(10, 1fr);
-	gap: 1rem;
-	border: solid 1px gray;
+	display: flex;
+	gap: 3rem;
 	width: 80%;
-    margin: 0 auto;
+	justify-content: center;
+	align-items: center;
 }
 
 nav ul li {
+	display: flex;
+	justify-content: center;
 	font-size: 2rem;
-	border-right: solid 1px gray;
-	border-left: solid 1px gray;
-    /* padding: 0 3rem; */
-    width: 100%;
-    justify-self: center;
-
+	width: fit-content;
+	padding: 0;
 }
 
 nav ul li a {
-    margin: 0 auto;
-    color: var(--pink);
+	margin: 0;
+	padding: 0;
+	color: red;
+	transition: all 300ms;
 }
-.brrand {
+
+nav ul li a:hover {
+	margin: 0;
+	padding: 0;
+	color: red;
+	transform: scale(1.08);
+	font-weight: 500;
+	color: white;
+	text-shadow: 0 0 5px black;
+}
+
+nav ul li span {
+	margin: 0;
+	padding: 0;
+	color: red;
+	transition: all 300ms;
+}
+
+nav ul li span:hover {
+	margin: 0 0.5rem;
+	padding: 0;
+	transform: scale(1.08);
+	font-weight: 500;
+	color: white;
+	text-shadow: 0 0 5px black;
+	cursor: pointer;
+}
+
+.onlineHomeo {
 	display: none;
 }
 
@@ -32,6 +100,163 @@ nav ul li a {
 	display: none;
 }
 
+.dropdownButton {
+	color: var(--pink);
+	display: block;
+	margin: auto 0;
+	margin-right: 0.8rem;
+	transition: all 300ms ease-in-out;
+	font-size: 1.8rem;
+}
+
+.dropdownButton:hover {
+	color: red;
+	cursor: pointer;
+	margin-right: 1.2rem;
+}
+
 .dropdown {
-	display: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: var(--beige);
+	border-radius: 20px;
+	transition: all 500ms ease-in-out !important;
+	z-index: 9999 !important;
+}
+
+.dropdown:hover {
+	background-color: var(--lightpink);
+	box-shadow: 0 0 5px var(--pink);
+	transform: scale(1.03);
+}
+
+.dropdown li {
+	width: 100%;
+}
+
+.dropdown li a {
+	color: red;
+	text-shadow: none !important;
+	font-size: 1.7rem;
+}
+
+.dropdown li a:hover {
+	color: white;
+	text-shadow: 0 0 5px black !important;
+}
+
+.dropdown-visible {
+	max-height: 20rem;
+	transition: all 3s ease-in-out;
+	overflow: hidden;
+	padding: 1rem;
+	gap: 1rem;
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+}
+
+.dropdown-hidden {
+	max-height: 0 !important;
+	overflow: hidden;
+	transition: all 3s ease-in-out;
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+
+
+/* Estilos para Moviles */
+@media (max-width: 1000px) {
+	nav {
+		padding: 0rem;
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		padding: 0 3rem;
+		margin-bottom: 2rem;
+	}
+
+	nav ul li {
+		font-size: 1.8rem;
+	}
+
+	.dropdown li a {
+		font-size: 1.8rem;
+	}
+
+	.dropdown-visible {
+		position: relative;
+	}
+
+	.dropdown-hidden {
+		position: relative;
+	}
+
+	.overlay {
+		box-shadow: 0 0 0 100vmax rgb(0,0,0,.6);
+		border: none;
+	}
+
+	.mobileNav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	.onlineHomeo {
+		font-size: 1.6rem;
+		display: block;
+		color: var(--pink);
+		font-family: "raleway";
+		font-weight: 600;
+	}
+
+	.burger {
+		font-size: 3.4rem;
+		display: block;
+		cursor: pointer;
+	}
+
+	.showMenu {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		opacity: 1;
+		transition: all 300ms ease-in-out;
+		position: absolute;
+		top: 100%;
+	}
+
+	.hideMenu {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		opacity: 0;
+		transition: all 300ms ease-in-out;
+		position: absolute;
+		top: 110%;
+	}
+
+	.menu {
+		gap: 1rem !important;
+		background: var(--lightpink);
+		border-radius: 10px;
+		box-shadow: 0 0 5px var(--pink);
+		padding: 0.5rem 1.5rem;
+		width: 80vw;
+	}
+
+	.menu li {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+	}
 }

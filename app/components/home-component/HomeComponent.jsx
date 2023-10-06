@@ -75,8 +75,8 @@ function HomeComponent() {
 				className="selfie bsp"
 				src={selfie}
 				alt="Una selfie"
-				width={300}
-				height={300}
+				width={500}
+				height={500}
 			/>
 		</main>
 	);

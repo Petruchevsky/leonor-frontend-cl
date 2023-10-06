@@ -1,38 +1,57 @@
 footer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 15rem;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	padding: 2rem 4rem;
 	background-color: var(--lightpink);
 }
 
-.logo {
-	max-height: 100%;
-	height: auto;
-	width: auto;
-	grid-column: 1/2;
-	margin: 0 auto;
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
 }
 
-.lonorBcontainer {
-	grid-column: 2/3;
+.container-footer section {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.book-footer {
+	background: transparent;
+	transition: all 300ms;
+}
+
+.book-footer:hover {
+	transform: scale(1.05);
+	font-weight: bold;
+}
+
+.logo-footer {
+	width: 18rem;
+	height: auto;
+}
+
+.leonorB-footer-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	line-height: 5rem;
+	line-height: 6.4rem;
 	margin-top: 4rem;
 }
 
-.leonorB {
+.leonorB-footer-container h1 {
 	font-family: "Tangerine";
-	font-size: 12rem;
+	font-size: 19rem;
 	margin: 0;
 	padding: 0;
 }
 
-.onlineHomeopath {
+.leonorB-footer-container h2 {
 	background-color: transparent;
 	color: var(--darkgray);
 	font-weight: 300;
@@ -40,34 +59,358 @@ footer {
 	margin: 0;
 }
 
-.book {
-	grid-column: 3/4;
-	background: transparent;
-	transition: all 300ms;
-}
-
-.book:hover {
-	transform: scale(1.05);
-	font-weight: bold;
-}
-
-.icons {
-	grid-column: 4/5;
+.RRSS-container {
 	display: flex;
-	width: 100%;
-	gap: 2rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	border: solid 1px var(--pink);
+	border-radius: 20px;
+	padding: 2rem;
+	transition: all 400ms;
+}
+
+.RRSS-container:hover {
+	box-shadow: 0 0 15px var(--pink);
+}
+
+.RRSS-container h1 {
+	padding: 0;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+.icons-container {
+	display: flex;
+	gap: 1rem;
 }
 
 .icon {
-    transition: all 400ms;
-    filter: grayscale(100%);
+	transition: all 400ms;
+	filter: grayscale(100%);
+	padding: 0;
+	margin: 0;
+	width: 80px;
 }
 
 .icon:hover {
-    transform: scale(1.1);
-    filter: grayscale(0);
-    margin: 0 1rem;
-    cursor: pointer;
+	transform: scale(1.1);
+	filter: grayscale(0);
+	margin: 0 1rem;
+	cursor: pointer;
 }
 
 
+.developedBy {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background-color: black;
+	padding: 0 2rem;
+}
+
+.developedBy p {
+	font-size: 20px;
+	color: var(--pink);
+}
+.developedBy a {
+	font-size: 20px;
+	color: var(--orange);
+	transition: all 300ms;
+}
+
+.developedBy a:hover {
+	color: white;
+	font-weight: bold;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+
+/* Estilos para Pantallas Grandes */
+@media (min-width:1101px) and (max-width:1900px) {
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.container-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+
+	.book-footer {
+		padding: .5rem 0 0 0;
+		font-size: 2.5rem;
+	}
+
+	
+	.container-footer section {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	.logo-footer {
+		width: 10rem;
+		height: auto;
+	}
+
+	.leonorB-footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 3.2rem;
+		margin-top: 4rem;
+		width: fit-content;
+	}
+
+	.leonorB-footer-container h1 {
+		font-size: 9rem;
+	}
+
+	.leonorB-footer-container h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.RRSS-container {
+		padding: 1rem;
+		max-height: 10rem;
+		border-radius: 10px;
+	}
+
+	.RRSS-container h1 {
+		font-size: 2rem;
+	}
+
+	.icon {
+		width: 50px;
+	}
+
+	.developedBy {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		background-color: black;
+		padding: 0 2rem;
+	}
+
+	.developedBy p {
+		font-size: 14px;
+		color: var(--pink);
+	}
+	.developedBy a {
+		font-size: 14px;
+		color: var(--orange);
+		transition: all 300ms;
+	}
+
+	.developedBy a:hover {
+		color: white;
+		font-weight: bold;
+	}
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+
+/* Estilos para Pantallas Medianas */
+@media (min-width:601px) and (max-width:1100px) {
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.container-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+
+	.book-footer {
+		padding: .5rem 0 0 0;
+		font-size: 2rem;
+	}
+
+	
+	.container-footer section {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	.logo-footer {
+		width: 7rem;
+		height: auto;
+	}
+
+	.leonorB-footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 2.5rem;
+		margin-top: 4rem;
+		width: fit-content;
+	}
+
+	.leonorB-footer-container h1 {
+		font-size: 7rem;
+	}
+
+	.leonorB-footer-container h2 {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+
+	.RRSS-container {
+		padding: .5rem;
+		max-height: 7rem;
+		border-radius: 10px;
+	}
+
+	.RRSS-container h1 {
+		font-size: 1.6rem;
+	}
+
+	.icon {
+		width: 30px;
+	}
+
+	.developedBy {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		background-color: black;
+		padding: 0 2rem;
+	}
+
+	.developedBy p {
+		font-size: 12px;
+		color: var(--pink);
+	}
+	.developedBy a {
+		font-size: 12px;
+		color: var(--orange);
+		transition: all 300ms;
+	}
+
+	.developedBy a:hover {
+		color: white;
+		font-weight: bold;
+	}
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+
+
+/* Estilos para Móviles */
+@media (max-width:600px) {
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.container-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+	}
+
+	.book-footer {
+		padding: .5rem 0 0 0;
+		font-size: 2rem;
+	}
+
+	
+	.container-footer section {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	.logo-footer {
+		display: none;
+	}
+
+	.leonorB-footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 2.5rem;
+		margin-top: 4rem;
+		width: fit-content;
+	}
+
+	.leonorB-footer-container h1 {
+		font-size: 7rem;
+	}
+
+	.leonorB-footer-container h2 {
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+	}
+
+	.RRSS-container {
+		padding: .5rem;
+		max-height: 7rem;
+		border-radius: 10px;
+	}
+
+	.RRSS-container h1 {
+		font-size: 1.6rem;
+	}
+
+	.icon {
+		width: 30px;
+	}
+
+	.developedBy {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		background-color: black;
+		padding: 0 2rem;
+	}
+
+	.developedBy p {
+		font-size: 12px;
+		color: var(--pink);
+	}
+	.developedBy a {
+		font-size: 12px;
+		color: var(--orange);
+		transition: all 300ms;
+	}
+
+	.developedBy a:hover {
+		color: white;
+		font-weight: bold;
+	}
+}

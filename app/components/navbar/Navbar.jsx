@@ -1,29 +1,50 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ImMenu3 } from "react-icons/im";
 import { IoClose } from "react-icons/io5";
+import { FaRegCaretSquareDown } from "react-icons/fa";
 import "./Navbar.css";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
+	const router = useRouter();
+
 	const [isOpen, setIsOpen] = useState(false);
+	const [dropdownOpen, SetDropdownOpen] = useState(false);
+
+	const handleClick = () => {
+		SetDropdownOpen(!dropdownOpen);
+		console.log(dropdownOpen);
+	};
 
 	return (
-		<nav>
-			<div className="burger">
-				<h2>LeonorB</h2>
-				<ImMenu3 />
+		<nav className={`${isOpen ? 'overlay' : ''}`}>
+			<div className="mobileNav">
+				<ImMenu3 className="burger" onClick={() => setIsOpen(!isOpen)} />
+				<h2 className="onlineHomeo">Online Homeopath</h2>
 			</div>
-
-			<ul>
+			<ul className={`menu ${isOpen ? "showMenu" : "hideMenu"}`}>
 				<li>
 					<Link href="/">Home</Link>
 				</li>
-				<li>
-					<Link href="/">
-						Consultations
-						<ul className="dropdown">
+
+				<li className="flex-col relative">
+					<div className="flex">
+						<FaRegCaretSquareDown
+							className={`dropdownButton`}
+							onClick={handleClick}
+						/>
+						
+							<span onClick={() => router.push("/")}>Consultations</span>
+					</div>
+						
+						<ul
+							className={`dropdown ${
+								dropdownOpen ? "dropdown-visible" : "dropdown-hidden"
+							}`}
+						>
 							<li>
 								<Link href="/">Fees</Link>
 							</li>
@@ -34,13 +55,12 @@ function Navbar() {
 								<Link href="/">Privacy Police</Link>
 							</li>
 						</ul>
-					</Link>
 				</li>
 				<li>
 					<Link href="/">Homeopathy</Link>
 				</li>
 				<li>
-					<Link href="/">gut</Link>
+					<Link href="/">Gut</Link>
 				</li>
 				<li>
 					<Link href="/">Skin</Link>

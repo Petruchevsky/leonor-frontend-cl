@@ -48,9 +48,9 @@ function Header() {
 			</div>
 
 			<form action="/search" method="get" className="search">
-				<label htmlFor="search">Search</label>
 				<input
 					type="text"
+					size={24}
 					id="search"
 					name="q"
 					placeholder="What are you looking for...?"
