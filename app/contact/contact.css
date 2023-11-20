@@ -1,0 +1,106 @@
+.contact-container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 7rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-container > section {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+
+.contact-container > section > h1 {
+	margin-bottom: 2rem;
+}
+
+
+.contact-container > section > p {
+	margin-bottom: 2rem;
+	text-align: left;
+	width: 80%;
+}
+
+.contact-container > section > .link-button {
+	margin-bottom: 4rem;
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* Estilos Pantallas Grandes */
+
+@media (max-width: 2000px) and (min-width: 1025px) {
+	
+	.contact-container {
+		padding: 5rem 0;
+	}
+
+	.contact-container > section {
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+	}
+
+	.contact-container > section > p {
+		margin-bottom: 2rem;
+		text-align: left;
+		width: 100%;
+	}
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Estilos Laptop-Tablet */
+
+@media (max-width: 1024px) and (min-width: 601px) {
+	
+	.contact-container {
+		width: 80%;
+		padding: 5rem 0;
+	}
+
+	.contact-container > section {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+	}
+}
+/* ------------------------------------------------------------------------------------------ */
+/* Estilos Pantallas Moviles */
+
+@media (max-width: 600px) {
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 2rem;
+	}
+
+	.contact-container > section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+
+	.contact-container > section > p {
+		margin-bottom: 1rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.contact-container > section > p:last-child {
+		margin-bottom: 2rem;
+		text-align: center;
+		width: 100%;
+	}
+
+	.contact-container > section > a {
+		margin: 0 auto;
+		text-align: center;
+	}
+}

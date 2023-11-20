@@ -1,0 +1,118 @@
+.container-h {
+    display: grid;
+    grid-template-areas: 
+    "what-is-h what-is-h what-is-h what-is-h image-h image-h"
+    "when-use-h when-use-h when-use-h when-use-h when-use-h when-use-h";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    width: 80%;
+    margin: 0 auto;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    padding: 7rem 0;
+}
+
+.what-is-h {
+    grid-area: what-is-h;
+    width: 100%;
+}
+
+.image-h {
+    grid-area: image-h;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.when-use-h {
+    grid-area: when-use-h;
+    width: 100%;
+}
+.parrafo{
+    margin-bottom: 3rem ;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+/* Estilos Pantallas Grandes */
+
+@media (max-width:2000px) and (min-width:1001px) {
+
+    .container-h {
+        grid-template-areas: 
+        "image-h image-h image-h image-h image-h image-h"
+        "what-is-h what-is-h what-is-h what-is-h what-is-h what-is-h"
+        "when-use-h when-use-h when-use-h when-use-h when-use-h when-use-h";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        row-gap: 5rem;
+        column-gap: 5rem;
+        padding: 5rem 0;
+    }
+    
+    .image-h {
+        width: 80%;
+    }
+    
+    .parrafo{
+        margin-bottom: 2rem ;
+    }
+    
+}
+
+/*---------------------------------------------------------------------------------------*/
+/* Estilos Pantallas Medianas */
+
+@media (max-width:1000px) and (min-width:601px) {
+
+    .container-h {
+        grid-template-areas: 
+        "image-h image-h image-h image-h image-h image-h"
+        "what-is-h what-is-h what-is-h what-is-h what-is-h what-is-h"
+        "when-use-h when-use-h when-use-h when-use-h when-use-h when-use-h";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        row-gap: 4rem;
+        column-gap: 5rem;
+        padding: 3rem;
+        width: 100%;
+    }
+    
+    .image-h {
+        width: 100%;
+    }
+    
+    .parrafo{
+        margin-bottom: 2rem ;
+    }
+
+}    
+
+
+/*---------------------------------------------------------------------------------------*/
+/* Estilos Pantallas Moviles */
+
+@media (max-width:600px) {
+
+    .container-h {
+        grid-template-areas: 
+        "image-h image-h image-h image-h image-h image-h"
+        "what-is-h what-is-h what-is-h what-is-h what-is-h what-is-h"
+        "when-use-h when-use-h when-use-h when-use-h when-use-h when-use-h";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        row-gap: 4rem;
+        column-gap: 5rem;
+        padding: 2rem;
+        width: 100%;
+    }
+    
+    .image-h {
+        width: 100%;
+    }
+    
+    .parrafo{
+        margin-bottom: 2rem ;
+    }
+
+}    

@@ -1,0 +1,76 @@
+
+.slick-slide > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    height: 550px;
+    margin: 0rem auto 4rem auto;
+    padding: 4rem 3rem;
+    border: solid 3px var(--lightgray);
+    border-radius: 20px;
+    background-color: var(--lightpink);
+}
+
+.h2-t {
+    color: var(--pink);
+    padding-bottom: 3rem;
+    border-bottom: solid 2px var(--pink);
+    font-weight: 500;
+}
+
+#h1-t {
+    margin-bottom: 0;
+}
+
+/* .hr-t {
+    margin-bottom: 2rem;
+    color: var(--pink);
+} */
+
+.p-t {
+    margin-bottom: 3rem;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Grandes */
+
+@media (max-width:2000px) and (min-width:1001px) {
+
+    .slick-slide > div {
+        width: 500px;
+        height: 400px;
+        margin: 2rem auto;
+        padding: 3rem 2rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Medianas */
+
+@media (max-width:1000px) and (min-width:601px) {
+
+    .slick-slide > div {
+        width: 470px;
+        height: 370px;
+        margin: 2rem auto;
+        padding: 3rem 2rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Moviles */
+
+@media (max-width:600px) {
+
+    .slick-slide > div {
+        width: 95%;
+        height: auto;
+        min-height: 350px;
+        margin: 2rem auto;
+        padding: 3rem 2rem;
+    }
+}

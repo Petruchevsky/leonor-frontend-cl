@@ -1,0 +1,17 @@
+.main-div {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.container-g {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.img-g {
+    width: 300px;
+    height: auto;
+}

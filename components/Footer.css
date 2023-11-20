@@ -9,30 +9,46 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
-	width: 100%;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .container-footer section {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .book-footer {
+	font-size: 3.2rem;
 	background: transparent;
 	transition: all 300ms;
+	padding: 1rem 0;
+
+}
+
+.book-footer span {
+	color: var(--pink);
+	font-weight: bold;
+	transition: all 300ms ease-in-out;
+}
+
+.book-footer span:hover {
+	color: var(--darkgray);
 }
 
 .book-footer:hover {
-	transform: scale(1.05);
-	font-weight: bold;
+	color: var(--pink);
+	width: 100%;
+	margin: auto 0;
 }
 
 .logo-footer {
-	width: 18rem;
+	width: 13rem;
 	height: auto;
+	margin-bottom: 2rem;
 }
 
 .leonorB-footer-container {
@@ -40,23 +56,25 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	line-height: 6.4rem;
-	margin-top: 4rem;
+	line-height: 3rem;
+	margin: 0rem 0rem 2rem 5rem;
 }
 
-.leonorB-footer-container h1 {
-	font-family: "Tangerine";
-	font-size: 19rem;
-	margin: 0;
-	padding: 0;
+.leonorB-footer-container h3 {
+	font-family: "Agreement Signature";
+	font-weight: 100;
+	font-size: 12rem;
+	padding: 0rem;
+	color: var(--darkgray);
 }
 
 .leonorB-footer-container h2 {
+	font-size: 2.5rem;
 	background-color: transparent;
-	color: var(--darkgray);
-	font-weight: 300;
-	padding: 0;
-	margin: 0;
+	color: var(--pink);
+	font-weight: bold;
+	padding-left: 6rem;
+	margin-bottom: 2rem;
 }
 
 .RRSS-container {
@@ -65,36 +83,40 @@ footer {
 	align-items: center;
 	justify-content: center;
 	width: fit-content;
-	border: solid 1px var(--pink);
 	border-radius: 20px;
 	padding: 2rem;
 	transition: all 400ms;
+	margin-bottom: 2rem;
 }
 
 .RRSS-container:hover {
 	box-shadow: 0 0 15px var(--pink);
 }
 
-.RRSS-container h1 {
-	padding: 0;
-	font-weight: 500;
-	font-size: 3rem;
-}
 
 .icons-container {
 	display: flex;
-	gap: 1rem;
+	gap: 2rem;
 }
 
-.icon {
+.icon-f {
 	transition: all 400ms;
-	filter: grayscale(100%);
+	filter: grayscale(100%) brightness(1.7);
 	padding: 0;
 	margin: 0;
-	width: 80px;
+	width: 70px;
+	border-radius: 20px;
 }
 
-.icon:hover {
+.icon-i {
+	transition: all 400ms;
+	filter: grayscale(100%) brightness(1.7);
+	padding: -5px;
+	margin: 0;
+	width: 70px;
+}
+
+.icon-f:hover, .icon-i:hover {
 	transform: scale(1.1);
 	filter: grayscale(0);
 	margin: 0 1rem;
@@ -108,29 +130,33 @@ footer {
 	align-items: center;
 	width: 100%;
 	background-color: black;
-	padding: 0 2rem;
+	padding: 0;
 }
 
 .developedBy p {
 	font-size: 20px;
 	color: var(--pink);
+	letter-spacing: 1px;
+	margin: 0;
 }
 .developedBy a {
 	font-size: 20px;
 	color: var(--orange);
 	transition: all 300ms;
+	letter-spacing: 1px;
 }
 
 .developedBy a:hover {
 	color: white;
 	font-weight: bold;
+	transform: scale(1.03);
 }
 
 /*---------------------------------------------------------------------------------------------*/
 
 
 /* Estilos para Pantallas Grandes */
-@media (min-width:1101px) and (max-width:1900px) {
+@media (min-width:1001px) and (max-width:2000px) {
 
 	footer {
 		display: flex;
@@ -148,7 +174,13 @@ footer {
 
 	.book-footer {
 		padding: .5rem 0 0 0;
-		font-size: 2.5rem;
+		font-size: 2rem;
+	}
+
+	.logo-footer {
+		margin: 0 0 0.5rem 0;
+		width: 9rem;
+		height: auto;
 	}
 
 	
@@ -156,70 +188,67 @@ footer {
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
+		align-items: flex-end;
 	}
-	
-	.logo-footer {
-		width: 10rem;
-		height: auto;
-	}
+
 
 	.leonorB-footer-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		line-height: 3.2rem;
-		margin-top: 4rem;
+		line-height: 2rem;
+		margin: 4rem 0 .5rem 0;
 		width: fit-content;
 	}
 
-	.leonorB-footer-container h1 {
-		font-size: 9rem;
+	.leonorB-footer-container h3 {
+		font-size: 7rem;
+		font-weight: 100;
+		color: var(--darkgray);
+		padding: 0 0 0 4rem;
 	}
 
 	.leonorB-footer-container h2 {
-		font-size: 2rem;
+		font-size: 1.5rem;
+		font-weight: bold;
 		margin-bottom: 1rem;
+		color: var(--pink);
+		padding: 0 0 0 8rem;
 	}
 
 	.RRSS-container {
-		padding: 1rem;
-		max-height: 10rem;
+		padding: 1.5rem;
+		/* max-height: 10rem; */
 		border-radius: 10px;
+		margin-bottom: 1rem;
 	}
 
-	.RRSS-container h1 {
-		font-size: 2rem;
+	.icons-container {
+		display: flex;
+		gap: 1rem;
 	}
 
-	.icon {
-		width: 50px;
+	.icon-i {
+		width: 40px;
+	}
+	.icon-f {
+		width: 40px;
+		border-radius: 15px;
 	}
 
 	.developedBy {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		width: 100%;
-		background-color: black;
-		padding: 0 2rem;
+		padding: 0rem;
 	}
 
 	.developedBy p {
-		font-size: 14px;
-		color: var(--pink);
-	}
-	.developedBy a {
-		font-size: 14px;
-		color: var(--orange);
-		transition: all 300ms;
+		font-size: 12px;
 	}
 
-	.developedBy a:hover {
-		color: white;
-		font-weight: bold;
+	.developedBy a {
+		font-size: 12px;
 	}
+
 }
 
 
@@ -227,7 +256,7 @@ footer {
 
 
 /* Estilos para Pantallas Medianas */
-@media (min-width:601px) and (max-width:1100px) {
+@media (min-width:601px) and (max-width:1000px) {
 
 	footer {
 		display: flex;
@@ -245,7 +274,13 @@ footer {
 
 	.book-footer {
 		padding: .5rem 0 0 0;
-		font-size: 2rem;
+		font-size: 1.8rem;
+	}
+
+	.logo-footer {
+		margin: 0 0 0.5rem 0;
+		width: 7rem;
+		height: auto;
 	}
 
 	
@@ -253,69 +288,64 @@ footer {
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
+		align-items: flex-end;
 	}
-	
-	.logo-footer {
-		width: 7rem;
-		height: auto;
-	}
+
 
 	.leonorB-footer-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		line-height: 2.5rem;
-		margin-top: 4rem;
+		line-height: 1.7rem;
+		margin: 4rem 0 .5rem 0;
 		width: fit-content;
 	}
 
-	.leonorB-footer-container h1 {
-		font-size: 7rem;
+	.leonorB-footer-container h3 {
+		font-size: 6rem;
+		font-weight: 100;
+		color: var(--darkgray);
+		padding: 0 0 0 4rem;
 	}
 
 	.leonorB-footer-container h2 {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
+		font-weight: bold;
 		margin-bottom: 1rem;
+		color: var(--pink);
+		padding: 0 0 0 7rem;
 	}
 
 	.RRSS-container {
-		padding: .5rem;
-		max-height: 7rem;
+		padding: 1.5rem;
+		border-radius: 10px;
+		margin-bottom: 1rem;
+	}
+
+	.icons-container {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.icon-i {
+		width: 35px;
+	}
+	.icon-f {
+		width: 35px;
 		border-radius: 10px;
 	}
 
-	.RRSS-container h1 {
-		font-size: 1.6rem;
-	}
-
-	.icon {
-		width: 30px;
-	}
-
 	.developedBy {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		width: 100%;
-		background-color: black;
-		padding: 0 2rem;
+		padding: 0rem;
 	}
 
 	.developedBy p {
 		font-size: 12px;
-		color: var(--pink);
-	}
-	.developedBy a {
-		font-size: 12px;
-		color: var(--orange);
-		transition: all 300ms;
 	}
 
-	.developedBy a:hover {
-		color: white;
-		font-weight: bold;
+	.developedBy a {
+		font-size: 12px;
 	}
 }
 
@@ -342,7 +372,7 @@ footer {
 
 	.book-footer {
 		padding: .5rem 0 0 0;
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 
 	
@@ -362,55 +392,54 @@ footer {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		line-height: 2.5rem;
-		margin-top: 4rem;
+		line-height: 1.7rem;
+		margin: 4rem 0 .5rem 0;
 		width: fit-content;
 	}
 
-	.leonorB-footer-container h1 {
-		font-size: 7rem;
+	.leonorB-footer-container h3 {
+		font-size: 6rem;
+		font-weight: 100;
+		color: var(--darkgray);
+		padding: 0 0 0 0rem;
 	}
 
 	.leonorB-footer-container h2 {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
+		font-weight: bold;
 		margin-bottom: 1rem;
+		color: var(--pink);
+		padding: 0 0 0 3rem;
 	}
 
 	.RRSS-container {
 		padding: .5rem;
-		max-height: 7rem;
+		border-radius: 10px;
+		margin: 0;
+	}
+
+	.icons-container {
+		gap: 1rem;
+	}
+
+	.icon-i {
+		width: 35px;
+	}
+
+	.icon-f {
+		width: 35px;
 		border-radius: 10px;
 	}
 
-	.RRSS-container h1 {
-		font-size: 1.6rem;
-	}
-
-	.icon {
-		width: 30px;
-	}
-
 	.developedBy {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		width: 100%;
-		background-color: black;
 		padding: 0 2rem;
 	}
 
 	.developedBy p {
-		font-size: 12px;
-		color: var(--pink);
+		font-size: 10px;
 	}
 	.developedBy a {
-		font-size: 12px;
-		color: var(--orange);
-		transition: all 300ms;
+		font-size: 10px;
 	}
 
-	.developedBy a:hover {
-		color: white;
-		font-weight: bold;
-	}
 }

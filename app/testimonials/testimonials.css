@@ -1,0 +1,86 @@
+.container-testi {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 7rem 0;
+}
+
+.container-testi h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.img-testi {
+    width: 70%;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Grandes */
+
+@media (max-width:2000px) and (min-width:1001px) {
+
+    .container-testi {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+    
+    .container-testi h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .img-testi {
+        width: 80%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Medianas */
+
+@media (max-width:1000px) and (min-width:601px) {
+
+    .container-testi {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 3rem 0 5rem 0;
+    }
+    
+    .container-testi h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .img-testi {
+        width: 80%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Moviles */
+
+@media (max-width:600px) {
+
+    .container-testi {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2rem 0 5rem 0;
+    }
+    
+    .container-testi h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .img-testi {
+        width: 100%;
+    }
+}

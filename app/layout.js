@@ -1,17 +1,18 @@
-import Header from "./components/header/Header";
-import { Toaster } from "react-hot-toast";
+import Header from "../components/Header"
+import { Toaster } from "../utils/Toaster";
 import Link from "next/link";
-import "./globals.css";
-import "./components/header/Header.css"
-import "typeface-raleway";
-import "typeface-tangerine";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import "@fontsource/red-hat-display";
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
+import "@creative-fonts/agreement-signature"
+import "typeface-raleway";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import "./globals.css";
 
 export const metadata = {
 	openGraph: {
-	  title: "LeonorB Homeopath Online",
+	  title: "Leonor-B Homeopath Online",
 	  description: "Welcome to my Site",
 	  images: {
 		url: "https://res.cloudinary.com/dsvlzbctv/image/upload/v1696360859/logoconfondo_71c9548045.png"

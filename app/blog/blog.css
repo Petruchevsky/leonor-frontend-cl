@@ -1,0 +1,133 @@
+.container-blog {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 7rem 0;
+}
+
+.container-blog > div > h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.container-blog > div > p {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* .img-blog {
+    width: 70%;
+    border-radius: 10px;
+    margin: 0 auto;
+} */
+
+.post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    gap: 5rem;
+    border: solid var(--lightgray);
+    border-radius: 20px;
+    box-shadow: 0 0 10px lightgrey;
+    padding: 3rem;
+}
+
+.post > img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.post-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Grandes */
+
+@media (max-width:2000px) and (min-width:1001px) {
+
+    .container-blog {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+    
+    .container-blog > div > h1 {
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    .post {
+        gap: 3rem;
+    }
+
+    .post > img {
+        max-width: 30%;
+        height: 100%;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Medianas */
+
+@media (max-width:1000px) and (min-width:601px) {
+
+    .container-blog {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 3rem 0 5rem 0;
+    }
+    
+    .container-blog > div > h1 {
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    .post {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .post > img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* Estilos Pantallas Moviles */
+
+@media (max-width:600px) {
+
+    .container-blog {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .container-blog > div > h1 {
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    .post {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+
+    .post > img {
+        max-width: 100%;
+        height: 100%;
+    }
+}

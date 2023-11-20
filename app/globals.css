@@ -39,27 +39,43 @@ body {
 	font-family: "red hat display", Arial, Helvetica, sans-serif;
 }
 
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 7rem 0;
+}
+
 h1 {
-	font-size: 4rem;
+	font-size: 3.3rem;
 	color: var(--pink);
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	padding: 1rem;
+	margin-bottom: 3rem;
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: 3rem;
 	color: var(--darkgray);
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	text-align: center;
-	padding: 1rem;
+	
+}
+
+h4 {
+	font-size: 2.6rem;
+	color: var(--pink);
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin-bottom: 1.5rem;
 }
 
 p {
-	font-size: 2.2rem;
+	font-size: 2.4rem;
 	color: var(--darkgray);
-	padding: 1rem;
+	text-align: justify;
 	letter-spacing: .5px;
+	line-height: 4rem;
+	margin-bottom: 3rem;
 }
 
 button {
@@ -90,41 +106,70 @@ label {
   font-weight: bold;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="password"] {
   font-size: 2.2rem;
   text-align: center;
   padding: 1rem;
   margin: 0 1rem;
   border-radius: 5rem;
+  border: solid 1px transparent;
   transition: all 400ms;
 }
 
-input[type="text"]:hover {
+textarea {
+	font-size: 2.2rem;
+	text-align: center;
+	padding: 1rem 2rem;
+	margin: 0 1rem;
+	border-radius: 5rem;
+	border: solid 1px transparent;
+	transition: all 400ms;
+	height: 25rem;
+	width: 100%;
+  }
+
+input[type="text"]:hover,  input[type="email"]:hover, input[type="password"]:hover, textarea:hover {
 	cursor: pointer;
 	box-shadow: inset 0 0 15px lightpink;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,  input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
 	box-shadow: 0 0 15px lightpink;
 	color: var(--pink);
 	outline: none;
 	border: solid 1px lightpink;
-	margin: 0 2rem;
 }
 
 input[type="submit"] {
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: 400;
   padding: 1rem 1.3rem;
   border-radius: 50px;
   background-color: var(--pink);
-  color:  white;
+  color:  var(--lightgray);
   transition: all 500ms;
 }
 
 input[type="submit"]:hover {
 	cursor: pointer;
-	box-shadow: inset black 0 0 10px;
+	background-color: var(--darkgray);
+}
+
+.link-button {
+	font-size: 2.4rem;
+	font-weight: 400;
+	padding: 1rem 2.5rem;
+	border-radius: 10px;
+	background-color: var(--pink);
+	color:  var(--lightgray);
+	transition: all 500ms;
+	width: fit-content;
+}
+
+.link-button:hover {
+	cursor: pointer;
+	background-color: var(--darkgray);
+	box-shadow: 0 0 15px var(--darkgray);
 }
 
 
@@ -137,23 +182,47 @@ form {
 	box-shadow: 3px -3px 10px gray;
 }
 
+.link {
+	color: var(--pink);
+	font-weight: 600;
+	transition: all 300ms ease-in-out;
+	text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+
+.link:hover {
+	color: var(--darkgray);
+}
+
 
 /* --------------------------------------------------------------------------- */
 
 
 /* Estilos para Pantallas Grandes */
-@media (max-width:1900px) and (min-width:1101px){
+@media (max-width:2000px) and (min-width:1001px){
 
+	.container {
+		width: 80%;
+		padding: 5rem 0;
+	}
+	
 	h1 {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
+		margin-bottom: 2rem;
 	}
 	
 	h2 {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
+	}
+
+	h4 {
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
 	}
 	
 	p {
 		font-size: 1.6rem;
+		line-height: 3rem;
+		margin-bottom: 2rem;
 	}
 	
 	button {
@@ -172,23 +241,27 @@ form {
 		border-radius: 50px;
 	}
 	
-	button:hover {
-		background-color: var(--darkorange);
-		color: white;
-		border: solid 1px --orange;
-		box-shadow: 0 0 15px black;
-	}
-	
 	label {
 	 display: none;
 	}
 	
-	input[type="text"] {
+	input[type="text"], input[type="email"] {
 	  font-size: 1.6rem;
 	}
 	
+	textarea {
+		font-size: 1.6rem;
+		height: 20rem;
+	}
+
 	input[type="submit"] {
 	  font-size: 1.6rem;
+	}
+
+
+	.link-button {
+		font-size: 1.6rem;
+		padding: .7rem 1.5rem;
 	}
 	
 	form {
@@ -205,18 +278,31 @@ form {
 
 
 /* Estilos para Pantallas Medianas */
-@media (max-width:1100px) and (min-width:601px) {
+@media (max-width:1000px) and (min-width:601px) {
 
+	.container {
+		width: 100%;
+		padding: 3rem;
+	}
+	
 	h1 {
 		font-size: 2rem;
+		margin-bottom: 2rem;
 	}
 	
 	h2 {
 		font-size: 2rem;
 	}
+
+	h4 {
+	font-size: 1.7rem;
+	margin-bottom: 0rem;
+}
 	
 	p {
 		font-size: 1.4rem;
+		line-height: 2.6rem;
+		margin-bottom: 2rem;
 	}
 	
 	button {
@@ -235,23 +321,27 @@ form {
 		border-radius: 50px;
 	}
 	
-	button:hover {
-		background-color: var(--darkorange);
-		color: white;
-		border: solid 1px --orange;
-		box-shadow: 0 0 15px black;
-	}
-	
 	label {
 	 display: none;
 	}
 	
-	input[type="text"] {
+	input[type="text"], input[type="email"] {
 	  font-size: 1.4rem;
+	}
+	
+	textarea {
+		font-size: 1.4rem;
+		height: 15rem;
 	}
 	
 	input[type="submit"] {
 	  font-size: 1.4rem;
+	}
+
+	.link-button {
+		font-size: 1.4rem;
+		padding: .7rem 1.5rem;
+		border-radius: 6px;
 	}
 	
 	form {
@@ -268,19 +358,30 @@ form {
 /* Estilos para Móviles */
 @media (max-width:600px) {
 
+	.container {
+		width: 100%;
+		padding: 2rem;
+	}
+	
 	h1 {
 		font-size: 2rem;
-		padding: .5rem;
+		margin-bottom: 2rem;
 	}
 	
 	h2 {
 		font-size: 1.7rem;
 
 	}
+
+	h4 {
+		font-size: 1.7rem;
+		margin-bottom: 0rem;
+	}
 	
 	p {
 		font-size: 1.4rem;
-		padding: .5rem;
+		line-height: 2.3rem;
+		margin-bottom: 2rem;	
 	}
 	
 	button {
@@ -299,18 +400,11 @@ form {
 		border-radius: 50px;
 	}
 	
-	button:hover {
-		background-color: var(--darkorange);
-		color: white;
-		border: solid 1px --orange;
-		box-shadow: 0 0 15px black;
-	}
-	
 	label {
 		display: none;
 	}
 	
-	input[type="text"] {
+	input[type="text"], input[type="email"] {
 	  font-size: 1.4rem;
 	  text-align: center;
 	  padding: 1rem;
@@ -318,18 +412,10 @@ form {
 	  border-radius: 5rem;
 	  transition: all 400ms;
 	}
-	
-	input[type="text"]:hover {
-		cursor: pointer;
-		box-shadow: inset 0 0 15px lightpink;
-	}
-	
-	input[type="text"]:focus {
-		box-shadow: 0 0 15px lightpink;
-		color: var(--pink);
-		outline: none;
-		border: solid 1px lightpink;
-		margin: 0 2rem;
+
+	textarea {
+		font-size: 1.4rem;
+		height: 15rem;
 	}
 	
 	input[type="submit"] {
@@ -342,11 +428,11 @@ form {
 	  transition: all 500ms;
 	}
 	
-	input[type="submit"]:hover {
-		cursor: pointer;
-		box-shadow: inset black 0 0 10px;
+	.link-button {
+		font-size: 1.4rem;
+		padding: .7rem 1.5rem;
+		border-radius: 5px;
 	}
-	
 	
 	form {
 	  display: flex;

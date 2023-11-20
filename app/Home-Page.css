@@ -1,0 +1,166 @@
+
+    .container-home {
+        display: grid;
+        grid-template-areas: 
+        "image image image image image"
+        "welcome welcome welcome welcome welcome"
+        "hhch hhch hhch hhch hhch"
+        "about about about about selfie";
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, auto);
+        width: 80%;
+        margin: 0 auto;
+        row-gap: 5rem;
+        column-gap: 4rem;
+        padding: 7rem 0;
+    }
+    
+    .container-home section {
+        text-align: justify;
+    }
+    .container-home section p {
+        margin-bottom: 3rem;
+    }
+    
+    .container-home h1 {
+        text-align: left;
+    }
+
+    .image {
+        grid-area: image;
+        width: 100%;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    
+    .welcome {
+        grid-area: welcome;
+    
+    }
+
+    .welcome p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .hhch {
+        grid-area: hhch;
+    
+    }
+    
+    .about {
+        grid-area: about;
+        align-self: start;
+    }
+    
+    .selfie {
+        grid-area: selfie;
+        align-self: end;
+        margin-left: auto;
+        border-radius: 30px;
+        width: 100%;
+    }
+
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* Estilos para Pantallas Grandes */
+@media (max-width:2000px) and (min-width:1001px) {
+
+    .container-home {
+        width: 80%;
+        padding: 5rem 0;
+    }
+
+    .selfie {
+        grid-area: selfie;
+        align-self: center;
+        border-radius: 30px;
+        width: 100%;
+    }
+
+    .container-home section p {
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* Estilos para Pantallas Medianas */
+@media (max-width:1000px) and (min-width:601px) {
+
+    .container-home {
+        width: 100%;
+        padding: 3rem;
+        grid-template-areas: 
+        "image image image image"
+        "welcome welcome welcome welcome"
+        "hhch hhch hhch hhch"
+        "about about selfie selfie";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .selfie {
+        grid-area: selfie;
+        align-self: end;
+        border-radius: 10px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about {
+        align-self: center;
+    }
+
+    .container-home section p {
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* --------------------------------------------------------------------------- */
+
+
+/* Estilos para Móviles */
+@media (max-width:600px) {
+    
+    .container-home {
+        display: grid;
+        grid-template-areas: 
+        "image image image image"
+        "welcome welcome welcome welcome"
+        "hhch hhch hhch hhch"
+        "about about about about"
+        "selfie selfie selfie selfie";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, auto);
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        row-gap: 3rem;
+    }
+
+    .container-home section {
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .selfie {
+        grid-area: selfie;
+        align-self: center;
+        justify-self: center;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .container-home section p {
+        margin-bottom: 2rem;
+    }
+
+}

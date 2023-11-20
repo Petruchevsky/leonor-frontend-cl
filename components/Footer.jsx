@@ -1,42 +1,47 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import fetchHandler from "@/utils/fetchHandler";
-import { useEffect, useState } from "react";
 import "./Footer.css";
+import ErrorToast from "./ErrorToast";
 
 const getFooter = async () => {
 	try {
-		const response = await fetchHandler(
-			`${process.env.NEXT_PUBLIC_STRAPI}/api/home?populate=logo`,
-			{ cache: "no-store" }
+		const res = await fetch(
+			`${process.env.STRAPI}/api/home?populate=*`,
+			{ next: { tags: ["mi-etiqueta-de-cache"] } }
 		);
-		return response;
+		if (!res.ok) {
+			const errorData = await res.json();
+			const errorMessage = `Error ${res.status}: ${errorData.Message}`;
+			throw new Error(errorMessage);
+		}
+
+		const { data } = await res.json();
+		return data;
 	} catch (error) {
 		console.error(`Error getting data: ${error}`);
 	}
 };
 
-function Footer() {
-	const [logoUrl, setLogoUrl] = useState();
+async function Footer() {
+	let data;
+	let errorMsg;
 
-	useEffect(() => {
-		getFooter().then((response) => {
-			const logo =
-				response?.data?.attributes?.logo?.data?.attributes?.formats?.medium
-					?.url;
-			setLogoUrl(logo);
-		});
-	}, []);
+	try {
+		data = await getFooter();
+	} catch (error) {
+		errorMsg = error.message;
+	}
+
+	const logoUrl =
+		data?.attributes?.logo?.data?.attributes?.formats?.medium?.url;
 
 	return (
 		<footer>
 			<div className="container-footer">
-
+				<ErrorToast errorMsg={errorMsg} />
 				<Link href="/" className="book-footer">
 					<h2 className="book-footer">
-						<span className="text-pink-800 font-bold">Book</span> Your
-						Appointment Today
+						<span>Book</span> Your Appointment Today
 					</h2>
 				</Link>
 
@@ -50,12 +55,11 @@ function Footer() {
 					/>
 
 					<div className="leonorB-footer-container">
-						<h1>LeonorB</h1>
+						<h3>LeonorB.</h3>
 						<h2>Online Homeopath</h2>
 					</div>
 
 					<div className="RRSS-container">
-						<h1>Follow Me</h1>
 						<div className="icons-container">
 							<Link
 								href="https://m.facebook.com/Homeopathyenergymedicine"
@@ -63,21 +67,21 @@ function Footer() {
 							>
 								{" "}
 								<Image
-									src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1696188039/thumbnail_facebook_d431f572be.png"
+									src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1696641806/facebook_35e0a56122.png"
 									width={50}
 									height={50}
 									alt="icono de facebook"
-									className="icon"
+									className="icon-f"
 								/>
 							</Link>
 							<Link href="/">
 								{" "}
 								<Image
 									src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1696188039/thumbnail_insta_3f71c96df3.png"
-									width={48}
-									height={44}
-									alt="icon de facebook"
-									className="icon"
+									width={50}
+									height={50}
+									alt="icon de instagram"
+									className="icon-i"
 								/>
 							</Link>
 						</div>

@@ -1,35 +1,42 @@
-"use client";
 import Image from "next/image";
-import fetchHandler from "@/utils/fetchHandler";
-import { useEffect, useState } from "react";
 import "./Header.css";
+import ErrorToast from "./ErrorToast";
 
-const getHome = async () => {
+const getHeader = async () => {
 	try {
-		const response = await fetchHandler(
-			`${process.env.NEXT_PUBLIC_STRAPI}/api/home?populate=*`,
-			{ cache: "no-store" }
-		);
-		return response;
+		const res = await fetch(`${process.env.STRAPI}/api/home?populate=*`, {
+			next: { tags: ["mi-etiqueta-de-cache"] },
+		});
+		if (!res.ok) {
+			const errorData = await res.json();
+			const errorMessage = `Error: ${res.status}: ${errorData.message}`;
+			throw new Error(errorMessage);
+		}
+
+		const { data } = await res.json();
+		return data;
 	} catch (error) {
 		console.error(`Error getting data: ${error}`);
+		throw error;
 	}
 };
 
-function Header() {
-	const [logoUrl, setLogoUrl] = useState();
+async function Header() {
+	let data;
+	let errorMsg;
 
-	useEffect(() => {
-		getHome().then((response) => {
-			const logo =
-				response?.data?.attributes?.logo?.data?.attributes?.formats?.medium
-					?.url;
-			setLogoUrl(logo);
-		});
-	}, []);
+	try {
+		data = await getHeader();
+	} catch (error) {
+		errorMsg = error.message;
+	}
+
+	const logoUrl =
+		data?.attributes?.logo?.data?.attributes?.formats?.medium?.url;
 
 	return (
 		<header>
+			<ErrorToast errorMsg={errorMsg} />
 			{logoUrl ? (
 				<Image
 					src={logoUrl}
@@ -43,7 +50,7 @@ function Header() {
 			)}
 
 			<div className="lonorBcontainer">
-				<h1 className="leonorB">LeonorB</h1>
+				<h3 className="leonorB">LeonorB.</h3>
 				<h2 className="onlineHomeopath">Online Homeopath</h2>
 			</div>
 
