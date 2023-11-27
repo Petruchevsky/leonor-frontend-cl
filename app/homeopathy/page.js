@@ -66,7 +66,7 @@ async function Homeopathy() {
 			<section className="when-use-h">
 				<h1>{whenUseHomeopathy}</h1>
 				<Markdown text={whenUseHomeopathyText}/>
-				<Link className="link-button" href="/homeopathy">
+				<Link className="link-button" href="/blog">
 					For more information, visit my Blog 
 				</Link>
 			</section>

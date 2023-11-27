@@ -7,7 +7,7 @@
 
 .container-blog > div > h1 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .container-blog > div > p {
@@ -15,11 +15,11 @@
     margin-bottom: 5rem;
 }
 
-/* .img-blog {
+.img-blog {
     width: 70%;
     border-radius: 10px;
     margin: 0 auto;
-} */
+}
 
 .post {
     display: flex;
@@ -58,7 +58,13 @@
     
     .container-blog > div > h1 {
         text-align: center;
-        margin-bottom: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .img-blog {
+        width: 90%;
+        border-radius: 10px;
+        margin: 0 auto;
     }
 
     .post {
@@ -86,7 +92,13 @@
     
     .container-blog > div > h1 {
         text-align: center;
-        margin-bottom: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .img-blog {
+        width: 90%;
+        border-radius: 10px;
+        margin: 0 auto;
     }
 
     .post {
@@ -116,7 +128,13 @@
     
     .container-blog > div > h1 {
         text-align: center;
-        margin-bottom: 0rem;
+        margin: 2rem 0;
+    }
+
+    .img-blog {
+        width: 100%;
+        border-radius: 10px;
+        margin: 0 auto;
     }
 
     .post {
