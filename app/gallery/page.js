@@ -16,6 +16,9 @@ const getData = async () => {
 
 		if (!res.ok) {
 			const errorData = await res.json();
+			console.log(errorData)
+			if(res.status === 404) errorData.message = "Nothing Here... Yet!"
+			if(res.status === 500) errorData.message = "Backend Server is No Responding!!"
 			const errorMessage = `Error ${res.status}: ${errorData.message}`;
 			throw new Error(errorMessage);
 		}
@@ -30,6 +33,7 @@ const getData = async () => {
 };
 
 async function Gallery() {
+	
 	let errorMsg;
 	let data;
 
@@ -40,7 +44,7 @@ async function Gallery() {
 	}
 	
 	const images = data?.attributes?.image?.data; 
-	// console.log(images)
+
 
 	return (
 		<main className="container-gallery">
