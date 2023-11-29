@@ -16,10 +16,11 @@ const getData = async () => {
 
 		if (!res.ok) {
 			const errorData = await res.json();
-			console.log(errorData)
-			if(res.status === 404) errorData.message = "Nothing Here... Yet!"
-			if(res.status === 500) errorData.message = "Backend Server is No Responding!!"
-			const errorMessage = `Error ${res.status}: ${errorData.message}`;
+			console.log(errorData.error.status)
+			if(res.status === 404) errorData.error.message = "Nothing Here... Yet!"
+			if(res.status === 500) errorData.error.message = "Backend Server is No Responding Well!!"
+			const errorMessage = `${res.status}: ${errorData.error.message}`;
+			console.log(res)
 			throw new Error(errorMessage);
 		}
 

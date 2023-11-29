@@ -21,7 +21,7 @@ export async function POST(request) {
     // Opciones del correo
     const mailOptions = {
         from: process.env.SMTP_USERNAME,
-        to: process.env.GRUPO7_CONTACTO,
+        to: process.env.SMTP_USERNAME,
         subject: subject,
         replyTo: email,
         html: `
@@ -29,9 +29,9 @@ export async function POST(request) {
                 <h2>${subject}</h2>
                 <h4><strong>${message}</strong></h4>
                 <br/><br/><br/><br/>
-                <h5>Este mensaje fué enviado por ${name} através del formulario de contacto de Grupo7.CL</h5>
+                <h5>This message was sent by ${name} through the contact form of Leonor B Homeopath.</h5>
             </div>
-            <img src="https://res.cloudinary.com/dtqfrwjdm/image/upload/v1694029561/pie-mail-2_ymxuix.jpg" alt="imagen de pie de email" style="width:100%; position:absolute; bottom:0; box-shadow:0 0 10px white; margin:0 auto" />
+            <img src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701215920/pie_de_mail_25f6c9e49a.jpg" alt="imagen de pie de email" style="width:100%; position:absolute; bottom:0; box-shadow:0 0 10px white; margin:0 auto" />
         `,
     };
 

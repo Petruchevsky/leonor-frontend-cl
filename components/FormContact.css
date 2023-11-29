@@ -11,3 +11,21 @@
 	width: 100%;
     margin: 0 auto;
 }
+
+.successMsg {
+    background-color: rgb(103, 197, 103);
+    border-radius: 15px;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.errorMsg {
+    background-color: rgb(227, 131, 131);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    color:  white;
+    text-align: center;
+}

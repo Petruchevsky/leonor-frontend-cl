@@ -19,7 +19,7 @@ function FormContact() {
         const data = { name, email, subject, message };  // Definir data
 
         try {
-           const response = await fetch("/api/mailer", {
+           const res = await fetch("/api/mailer", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -27,11 +27,16 @@ function FormContact() {
                 body: JSON.stringify(data),
             });
 
-            if (!response.ok) {  // Verificar si la respuesta es ok
+            if (!res.ok) {  // Verificar si la respuesta es ok
                 throw new Error('Something went wrong');
             }
 
             setSuccessMsg("Message sent successfully!");  // Establecer mensaje de éxito
+            setName("")
+            setEmail("")
+            setSubject("")
+            setMessage("")
+
         } catch (error) {
             setErrorMsg(error.message);  // Establecer mensaje de error
         }
@@ -44,6 +49,9 @@ function FormContact() {
             <input type="text" value={subject} placeholder="Enter a Subject" onChange={(e) => setSubject(e.target.value)} required />
             <textarea value={message} placeholder="Enter your Message" onChange={(e) => setMessage(e.target.value)} required />
             <input type="submit" value="Send your Message" />
+
+            {successMsg && <p className="successMsg">{successMsg}</p>}
+            {errorMsg && <p>{errorMsg}</p>}
 
             <ErrorToast errorMsg={errorMsg} successMsg={successMsg} />
         </form>

@@ -12,6 +12,7 @@
     "@creative-fonts/agreement-signature": "^1.0.5",
     "@fontsource/red-hat-display": "^5.0.13",
     "@fontsource/red-hat-mono": "^5.0.8",
+    "framer-motion": "^10.16.5",
     "next": "latest",
     "nodemailer": "^6.9.6",
     "react": "latest",
