@@ -89,8 +89,9 @@ async function Footer() {
 				</section>
 			</div>
 			<div className="developedBy">
-				<p>Leonor B &copy;</p>
+				<Link href="/">Leonor B &copy;</Link>
 				<Link href="/">Developed by MBA Digital</Link>
+				<Link href="/privacy-police">Privacy Police</Link>
 			</div>
 		</footer>
 	);
