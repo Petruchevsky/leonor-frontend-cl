@@ -47,7 +47,7 @@ async function Consultations() {
 			<h1>{consultation}</h1>
 			<Markdown text={consultationText}/>
 
-			<Link className="link-button" href="/setmore">
+			<Link className="link-button" href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
 				Book an Appointment
 			</Link>
 

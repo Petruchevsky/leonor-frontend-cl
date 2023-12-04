@@ -15,10 +15,10 @@ function Contact() {
 				<p>You can contact me via e-mail.</p>
 				<Link
 					className="link-button"
-					href="mailto:enquiries@leonor-b.uk?subject=Enquiry"
+					href="mailto:contact@leonorb-homeopath.uk?subject=Enquiry"
 					target="_blank"
 				>
-					enquiries@leonor-b.uk
+					contact@leonorb-homeopath.uk
 				</Link>
 				<p>
 					My working hours are Monday - Friday (Exc Wednesdays) from 10 am - 5 pm

@@ -39,7 +39,7 @@ async function Footer() {
 		<footer>
 			<div className="container-footer">
 				<ErrorToast errorMsg={errorMsg} />
-				<Link href="/" className="book-footer">
+				<Link href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank" className="book-footer">
 					<h2 className="book-footer">
 						<span>Book</span> Your Appointment Today
 					</h2>

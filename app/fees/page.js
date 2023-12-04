@@ -58,14 +58,14 @@ async function page() {
 				<div>
 					<h2>{newClient}</h2>
 					<h1>£{newClientPrice}</h1>
-					<Link className="link-button" href="/setmore">
+					<Link className="link-button" href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
 						Book an Appointment
 					</Link>
 				</div>
 				<div>
 					<h2>{existingClient}</h2>
 					<h1>£{existingClientPrice}</h1>
-					<Link className="link-button" href="/setmore">
+					<Link className="link-button" href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
 						Book an Appointment
 					</Link>
 				</div>

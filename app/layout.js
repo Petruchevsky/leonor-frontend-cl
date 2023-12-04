@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body>
-				<Link href="/">
+				<Link href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
 					<h2 className="bookHeader">
 						Click<span>Here</span>to Book a
 						New or Follow Up Consultation
