@@ -40,7 +40,7 @@ async function Consultations() {
 
 	return (
 		<main className="faq-container">
-			<h1>Frecuently Asked Questions</h1>
+			<h1>Frequently Asked Questions</h1>
 			<section>
 				{data?.map((question) => (
 					<article>
