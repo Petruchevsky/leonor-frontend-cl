@@ -5,10 +5,9 @@ import ErrorToast from "./ErrorToast";
 
 const getFooter = async () => {
 	try {
-		const res = await fetch(
-			`${process.env.STRAPI}/api/home?populate=*`,
-			{ next: { tags: ["mi-etiqueta-de-cache"] } }
-		);
+		const res = await fetch(`${process.env.STRAPI}/api/home?populate=*`, {
+			next: { tags: ["mi-etiqueta-de-cache"] },
+		});
 		if (!res.ok) {
 			const errorData = await res.json();
 			const errorMessage = `Error ${res.status}: ${errorData.Message}`;
@@ -39,7 +38,11 @@ async function Footer() {
 		<footer>
 			<div className="container-footer">
 				<ErrorToast errorMsg={errorMsg} />
-				<Link href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank" className="book-footer">
+				<Link
+					href="https://leonorb-homeopath.setmore.com/leonorberdichevsky"
+					target="_blank"
+					className="book-footer"
+				>
 					<h2 className="book-footer">
 						<span>Book</span> Your Appointment Today
 					</h2>
@@ -54,9 +57,15 @@ async function Footer() {
 						className="logo-footer"
 					/>
 
-					<div className="leonorB-footer-container">
-						<h3>LeonorB.</h3>
-						<h2>Online Homeopath</h2>
+					<div className="leonorContainerFooter">
+						<div className="leonorBcontainerFooter">
+							<h3 className="leonorBFooter">Leonor</h3>
+							<h3 className="leonorBFooter">Berdichevsky</h3>
+						</div>
+						<div className="HOnlineContainerFooter">
+							<h2 className="onlineHomeopathFooter">Homeopathy</h2>
+							<h2 className="onlineHomeopathFooter">Online</h2>
+						</div>
 					</div>
 
 					<div className="RRSS-container">

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "@fontsource/red-hat-display";
-import "@creative-fonts/agreement-signature"
+import 'typeface-glacial-indifference'
 import "typeface-raleway";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

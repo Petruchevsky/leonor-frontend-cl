@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@creative-fonts/agreement-signature": "^1.0.5",
     "@fontsource/red-hat-display": "^5.0.13",
-    "@fontsource/red-hat-mono": "^5.0.8",
     "framer-motion": "^10.16.5",
     "next": "latest",
     "nodemailer": "^6.9.6",
@@ -23,8 +21,8 @@
     "react-photo-album": "^2.3.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "typeface-glacial-indifference": "^1.1.14",
     "typeface-raleway": "^1.1.13",
-    "typeface-tangerine": "^1.1.13",
     "yet-another-react-lightbox": "^3.14.0"
   },
   "devDependencies": {

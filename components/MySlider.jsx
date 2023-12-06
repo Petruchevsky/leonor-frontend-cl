@@ -21,9 +21,7 @@ function MySlider({ data }) {
 		<div>
 			<Slider {...settings}>
 				{data.map((testi) => (
-					<div key={testi.id}>
-            <h2 className="h2-t">What people Say</h2>
-            {/* <hr className="hr-t"/> */}
+					<div className="testi-container" key={testi.id}>
             <br />
 						<p className="p-t">{testi?.attributes?.testimonial}</p>
 						<h1 id="h1-t">{testi?.attributes?.name}</h1>

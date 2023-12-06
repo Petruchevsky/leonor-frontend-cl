@@ -5,12 +5,17 @@
     justify-content: space-around;
     align-items: center;
     width: 700px;
-    height: 550px;
+    height: auto;
     margin: 0rem auto 4rem auto;
     padding: 4rem 3rem;
     border: solid 3px var(--lightgray);
     border-radius: 20px;
     background-color: var(--lightpink);
+}
+
+.testi-container {
+    padding: 0 3rem;
+    height: auto;
 }
 
 .h2-t {
@@ -21,13 +26,9 @@
 }
 
 #h1-t {
-    margin-bottom: 0;
-}
-
-/* .hr-t {
     margin-bottom: 2rem;
-    color: var(--pink);
-} */
+    font-size: 2.5rem;
+}
 
 .p-t {
     margin-bottom: 3rem;
@@ -40,10 +41,21 @@
 
     .slick-slide > div {
         width: 500px;
-        height: 400px;
+        height: auto;
         margin: 2rem auto;
         padding: 3rem 2rem;
     }
+
+    .testi-container {
+        padding: 0rem 2rem;
+        height: auto;
+    }
+
+    #h1-t {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+    
 }
 
 
@@ -54,9 +66,14 @@
 
     .slick-slide > div {
         width: 470px;
-        height: 370px;
+        height: auto;
         margin: 2rem auto;
         padding: 3rem 2rem;
+    }
+
+    #h1-t {
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -72,5 +89,15 @@
         min-height: 350px;
         margin: 2rem auto;
         padding: 3rem 2rem;
+    }
+
+    .testi-container {
+        padding: 0rem;
+        height: auto;
+    }
+
+    #h1-t {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
     }
 }

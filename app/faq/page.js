@@ -10,17 +10,23 @@ export const metadata = {
 
 const getConsultations = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/faqs`, {
+		const res = await fetch(`${process.env.STRAPI}/api/faqs?_sort=id:asc`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
 		if (!res.ok) {
 			const errorData = await res.json();
+
+			if(errorData.error.status === 404) errorData.message = "No data found";
+			if(errorData.error.status === 500) errorData.message = "Internal Backend Server Error";
+
 			const errorMessage = `Error ${res.status}: ${errorData.message}`;
 			throw new Error(errorMessage);
 		}
 
 		const { data } = await res.json();
+		data.sort((a, b) => a.id - b.id);
+		console.log(data);
 		return data;
 	} catch (error) {
 		console.error(`Error getting data: ${error.message}`);

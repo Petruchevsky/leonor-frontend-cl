@@ -49,9 +49,15 @@ async function Header() {
 				<p>No se pudo cargar el logo</p>
 			)}
 
-			<div className="lonorBcontainer">
-				<h3 className="leonorB">LeonorB.</h3>
-				<h2 className="onlineHomeopath">Online Homeopath</h2>
+			<div className="leonorContainer">
+				<div className="leonorBcontainer">
+					<h3 className="leonorB">Leonor</h3>
+					<h3 className="leonorB">Berdichevsky</h3>
+				</div>
+				<div className="HOnlineContainer">
+					<h2 className="onlineHomeopath">Homeopathy</h2>
+					<h2 className="onlineHomeopath">Online</h2>
+				</div>
 			</div>
 
 			<form action="/search" method="get" className="search">

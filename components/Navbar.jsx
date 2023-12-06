@@ -83,6 +83,9 @@ function Navbar() {
 				<li>
 					<Link href="/contact">Contact</Link>
 				</li>
+				<li>
+					<Link href="/contact">Language</Link>
+				</li>
 			</ul>
 		</nav>
 	);

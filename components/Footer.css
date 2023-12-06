@@ -31,7 +31,6 @@ footer {
 
 .book-footer span {
 	color: var(--pink);
-	font-weight: bold;
 	transition: all 300ms ease-in-out;
 }
 
@@ -51,30 +50,42 @@ footer {
 	margin-bottom: 2rem;
 }
 
-.leonorB-footer-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	line-height: 3rem;
-	margin: 0rem 0rem 2rem 5rem;
+.leonorContainerFooter {
+
 }
 
-.leonorB-footer-container h3 {
-	font-family: "Agreement Signature";
-	font-weight: 100;
-	font-size: 12rem;
-	padding: 0rem;
-	color: var(--darkgray);
+.leonorBcontainerFooter {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   line-height: 8rem;
+   margin: 4rem 4rem 2rem 4rem;
+   padding: 0rem 0 0 0;
+ }
+
+ .HOnlineContainerFooter {
+   line-height: 3rem;
+   margin-bottom: 2rem;
+ }
+
+.leonorBFooter {
+   font-family: 'Breathing';
+   font-weight: 100;
+   font-size: 5rem;
+   padding-left: 6rem;
+   color: var(--darkgray);
 }
 
-.leonorB-footer-container h2 {
-	font-size: 2.5rem;
-	background-color: transparent;
-	color: var(--pink);
-	font-weight: bold;
-	padding-left: 6rem;
-	margin-bottom: 2rem;
+.onlineHomeopathFooter {
+   font-size: 2.5rem;
+   background-color: transparent;
+   color: var(--pink);
+   text-transform: uppercase;
+   padding-left: 7rem;
+   margin: 0;
+   font-family: 'Glacial Indifference';
+   letter-spacing: 4px;
 }
 
 .RRSS-container {
@@ -192,30 +203,39 @@ footer {
 	}
 
 
-	.leonorB-footer-container {
+	.leonorBcontainerFooter {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		line-height: 2rem;
-		margin: 4rem 0 .5rem 0;
-		width: fit-content;
-	}
-
-	.leonorB-footer-container h3 {
-		font-size: 7rem;
+		line-height: 4.5rem;
+		margin: 4rem 4rem 1.5rem 4rem;
+		padding: 0rem 0 0 0;
+	  }
+	 
+	  .HOnlineContainerFooter {
+		line-height: 2.4rem;
+		margin-bottom: 2rem;
+	  }
+	 
+	 .leonorBFooter {
+		font-family: 'Breathing';
 		font-weight: 100;
+		font-size: 3.5rem;
+		padding-left: 3rem;
 		color: var(--darkgray);
-		padding: 0 0 0 4rem;
-	}
-
-	.leonorB-footer-container h2 {
-		font-size: 1.5rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
+	 }
+	 
+	 .onlineHomeopathFooter {
+		font-size: 2rem;
+		background-color: transparent;
 		color: var(--pink);
-		padding: 0 0 0 8rem;
-	}
+		text-transform: uppercase;
+		padding-left: 4rem;
+		margin: 0;
+		font-family: 'Glacial Indifference';
+		letter-spacing: 4px;
+	 }
 
 	.RRSS-container {
 		padding: 1.5rem;
@@ -292,30 +312,44 @@ footer {
 	}
 
 
-	.leonorB-footer-container {
+	.leonorContainerFooter {
+		margin-left: 1rem;
+	 }
+  
+	 .leonorBcontainerFooter {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
-		line-height: 1.7rem;
-		margin: 4rem 0 .5rem 0;
-		width: fit-content;
-	}
-
-	.leonorB-footer-container h3 {
-		font-size: 6rem;
+		line-height: 4.5rem;
+		margin: 4rem 0rem 1rem 0;
+		padding: 0rem 0 0 0;
+	  }
+	 
+	  .HOnlineContainerFooter {
+		line-height: 2.4rem;
+		margin-bottom: 2rem;
+	  }
+	 
+	 .leonorBFooter {
+		font-family: 'Breathing';
 		font-weight: 100;
+		font-size: 3.2rem;
+		padding-left: 3rem;
 		color: var(--darkgray);
-		padding: 0 0 0 4rem;
-	}
-
-	.leonorB-footer-container h2 {
-		font-size: 1.4rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
+	 }
+	 
+	 .onlineHomeopathFooter {
+		font-size: 1.5rem;
+		background-color: transparent;
 		color: var(--pink);
-		padding: 0 0 0 7rem;
-	}
+		text-transform: uppercase;
+		padding-left: 4rem;
+		margin: 0;
+		font-family: 'Glacial Indifference';
+		letter-spacing: 4px;
+	 }
+  
 
 	.RRSS-container {
 		padding: 1.5rem;
@@ -387,30 +421,43 @@ footer {
 		display: none;
 	}
 
-	.leonorB-footer-container {
+	.leonorContainerFooter {
+		margin-left: 1rem;
+	 }
+  
+	 .leonorBcontainerFooter {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
-		line-height: 1.7rem;
-		margin: 4rem 0 .5rem 0;
-		width: fit-content;
-	}
-
-	.leonorB-footer-container h3 {
-		font-size: 6rem;
+		line-height: 4.5rem;
+		margin: 4rem 0rem 1rem 0;
+		padding: 0rem 0 0 0;
+	  }
+	 
+	  .HOnlineContainerFooter {
+		line-height: 2.4rem;
+		margin-bottom: 2rem;
+	  }
+	 
+	 .leonorBFooter {
+		font-family: 'Breathing';
 		font-weight: 100;
+		font-size: 3.2rem;
+		padding-left: 0rem;
 		color: var(--darkgray);
-		padding: 0 0 0 0rem;
-	}
-
-	.leonorB-footer-container h2 {
-		font-size: 1.4rem;
-		font-weight: bold;
-		margin-bottom: 1rem;
+	 }
+	 
+	 .onlineHomeopathFooter {
+		font-size: 1.5rem;
+		background-color: transparent;
 		color: var(--pink);
-		padding: 0 0 0 3rem;
-	}
+		text-transform: uppercase;
+		padding-left: 0rem;
+		margin: 0;
+		font-family: 'Glacial Indifference';
+		letter-spacing: 4px;
+	 }
 
 	.RRSS-container {
 		padding: .5rem;
