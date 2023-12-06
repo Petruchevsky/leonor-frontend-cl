@@ -52,7 +52,7 @@ async function Home() {
 	return (
 		<main className="container-home">
 			<Image
-				className="image bsp"
+				className="image"
 				src={homePageImage}
 				alt="Home Page image"
 				width={2000}
@@ -81,7 +81,7 @@ async function Home() {
 			</section>
 
 			<Image
-				className="selfie bsp"
+				className="selfie"
 				src={selfie}
 				alt="Una selfie"
 				width={2000}
