@@ -1,252 +1,385 @@
 @font-face {
-	font-family: 'Breathing';
-	src: url('../app/fonts/Breathing.ttf') format('truetype');
+	font-family: "Breathing";
+	src: url("../app/fonts/Breathing.ttf") format("truetype");
 }
 
 header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 80%;
-   margin: 0 auto;
-   padding: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1rem 0;
 }
 
 .logo {
-   max-height: 100%;
-   height: auto;
-   width: 13rem;
-   margin: 0;
+	max-height: 100%;
+	height: auto;
+	width: 13rem;
+	margin: 0;
 }
 
-
-
 .leonorBcontainer {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   line-height: 8rem;
-   margin: 4rem 4rem 2rem 4rem;
-   padding: 0rem 0 0 0;
- }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	line-height: 8rem;
+	margin: 4rem 4rem 2rem 4rem;
+	padding: 0rem 0 0 0;
+}
 
- .HOnlineContainer {
-   line-height: 3rem;
-   margin-bottom: 2rem;
- }
+.HOnlineContainer {
+	line-height: 3rem;
+	margin-bottom: 2rem;
+}
 
 .leonorB {
-   font-family: 'Breathing';
-   font-weight: 100;
-   font-size: 5rem;
-   padding-left: 23rem;
-   color: var(--darkgray);
+	font-family: "Breathing";
+	font-weight: 100;
+	font-size: 5rem;
+	padding-left: 23rem;
+	color: var(--darkgray);
 }
 
 .onlineHomeopath {
-   font-size: 2.5rem;
-   background-color: transparent;
-   color: var(--pink);
-   text-transform: uppercase;
-   padding-left: 24rem;
-   margin: 0;
-   font-family: 'Glacial Indifference';
-   letter-spacing: 4px;
+	font-size: 2.5rem;
+	background-color: transparent;
+	color: var(--pink);
+	text-transform: uppercase;
+	padding-left: 24rem;
+	margin: 0;
+	font-family: "Glacial Indifference";
+	letter-spacing: 4px;
 }
 
 .search {
-   width: auto;
+	width: auto;
+}
+
+.bookHeaderContainer {
+	width: 100%;
 }
 
 .bookHeader {
-   font-size: 2.6rem;
-   transition: all 400ms;
-   background-color: var(--pink);
-   padding: 1rem 0;
+	font-size: 2.6rem;
+	transition: all 400ms;
+	background-color: var(--pink);
+	padding: 1rem 0;
+	margin: 1rem 0rem;
+	border-radius: 50px;
 }
 
 .bookHeader:hover {
 	color: var(--lightgray);
-   background-color: var(--darkgray);
+	background-color: var(--darkgray);
 }
 
 .bookHeader span {
-	padding: 0 .9rem;
+	padding: 0 0.9rem;
 	color: var(--lightgray);
-   transition: all 300ms;
+	transition: all 300ms;
 }
 
 .bookHeader span:hover {
 	color: var(--pink);
-
 }
 
+.topHeader {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.flagContainerES {
+	background-color: var(--pink);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "raleway";
+	font-size: 1.7rem;
+	padding-right: 2rem;
+	transition: all 300ms;
+	margin: 1rem 1rem;
+	border-radius: 50px;
+}
+
+.flagContainerUK {
+	background-color: var(--pink);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "raleway";
+	font-size: 1.7rem;
+	padding-left: 2rem;
+	transition: all 300ms;
+	margin: 1rem 1rem;
+	border-radius: 50px;
+}
+
+.flagContainerES:hover,
+.flagContainerUK:hover {
+	background-color: var(--darkgray);
+	color: white;
+	cursor: pointer;
+}
+
+.uk-flag {
+	height: 25px;
+	width: 50px;
+	border-radius: 5px;
+	border: solid 1px var(--darkgray);
+	margin: 0 2rem 0 1rem;
+	transition: all 300ms;
+}
+
+.esp-flag {
+	height: 35px;
+	width: 60px;
+	border-radius: 5px;
+	border: solid 1px var(--darkgray);
+	margin: 0 1rem 0 2rem;
+	transition: all 300ms;
+}
+
+.uk-flag:hover, .esp-flag:hover {
+	border: solid 1px white;
+}
 
 /* ---------------------------------------------------------------------------------------------------*/
-
 
 /* Estilos para Pantallas Grandes */
-@media (max-width:2000px) and (min-width:1001px) {
+@media (max-width: 2000px) and (min-width: 1001px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+	}
 
-   header {
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
+	.logo {
+		width: 9rem;
+	}
+
+	.leonorBcontainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 4.5rem;
+		margin: 4rem 4rem 1.5rem 4rem;
+		padding: 0rem 0 0 0;
+	}
+
+	.HOnlineContainer {
+		line-height: 2.4rem;
+		margin-bottom: 2rem;
+	}
+
+	.leonorB {
+		font-family: "Breathing";
+		font-weight: 100;
+		font-size: 3.5rem;
+		padding-left: 14rem;
+		color: var(--darkgray);
+	}
+
+	.onlineHomeopath {
+		font-size: 2rem;
+		background-color: transparent;
+		color: var(--pink);
+		text-transform: uppercase;
+		padding-left: 15rem;
+		margin: 0;
+		font-family: "Glacial Indifference";
+		letter-spacing: 4px;
+	}
+
+	.bookHeader {
+		font-size: 2rem;
+		transition: all 400ms;
+		background-color: var(--pink);
+	}
+
+   .flagContainerES {
+      font-size: 1.2rem;
    }
-
-   .logo {
-      width: 9rem;
-   }
-
-   .leonorBcontainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      line-height: 4.5rem;
-      margin: 4rem 4rem 1.5rem 4rem;
-      padding: 0rem 0 0 0;
-    }
    
-    .HOnlineContainer {
-      line-height: 2.4rem;
-      margin-bottom: 2rem;
-    }
-   
-   .leonorB {
-      font-family: 'Breathing';
-      font-weight: 100;
-      font-size: 3.5rem;
-      padding-left: 14rem;
-      color: var(--darkgray);
-   }
-   
-   .onlineHomeopath {
-      font-size: 2rem;
-      background-color: transparent;
-      color: var(--pink);
-      text-transform: uppercase;
-      padding-left: 15rem;
-      margin: 0;
-      font-family: 'Glacial Indifference';
-      letter-spacing: 4px;
+   .flagContainerUK {
+
+      font-size: 1.2rem;
+
    }
 
-   .bookHeader {
-      font-size: 2rem;
-      transition: all 400ms;
-      background-color: var(--pink);
+   .uk-flag {
+      height: 22px;
+      width: 40px;
+      border-radius: 5px;
+      margin: 0 2rem 0 1rem;
    }
+   
+   .esp-flag {
+      height: 25px;
+      width: 50px;
+      border-radius: 5px;
+      margin: 0 1rem 0 2rem;   }
 }
 
-
 /* ---------------------------------------------------------------------------------------------------*/
-
 
 /* Estilos para Pantallas Medianas */
-@media (max-width:1000px) and (min-width:601px) {
+@media (max-width: 1000px) and (min-width: 601px) {
+	header {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: row;
+		padding: 0 2rem;
+		width: 100%;
+	}
 
-   header {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      padding: 0 2rem;
-      width: 100%;
+	.logo {
+		display: none;
+	}
+
+	.leonorContainer {
+		margin-left: 1rem;
+	}
+
+	.leonorBcontainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		line-height: 4.5rem;
+		margin: 4rem 0rem 1rem 0;
+		padding: 0rem 0 0 0;
+	}
+
+	.HOnlineContainer {
+		line-height: 2.4rem;
+		margin-bottom: 2rem;
+	}
+
+	.leonorB {
+		font-family: "Breathing";
+		font-weight: 100;
+		font-size: 3.2rem;
+		padding-left: 0rem;
+		color: var(--darkgray);
+	}
+
+	.onlineHomeopath {
+		font-size: 1.5rem;
+		background-color: transparent;
+		color: var(--pink);
+		text-transform: uppercase;
+		padding-left: 1rem;
+		margin: 0;
+		font-family: "Glacial Indifference";
+		letter-spacing: 4px;
+	}
+
+	.search {
+		width: auto;
+	}
+
+	.bookHeader {
+		font-size: 1.8rem;
+		transition: all 400ms;
+		background-color: var(--pink);
+	}
+
+   .flagContainerES {
+      font-size: 1.2rem;
    }
-
-   .logo {
-      display: none;
-   }
-
-   .leonorContainer {
-      margin-left: 1rem;
-   }
-
-   .leonorBcontainer {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      line-height: 4.5rem;
-      margin: 4rem 0rem 1rem 0;
-      padding: 0rem 0 0 0;
-    }
    
-    .HOnlineContainer {
-      line-height: 2.4rem;
-      margin-bottom: 2rem;
-    }
-   
-   .leonorB {
-      font-family: 'Breathing';
-      font-weight: 100;
-      font-size: 3.2rem;
-      padding-left: 0rem;
-      color: var(--darkgray);
-   }
-   
-   .onlineHomeopath {
-      font-size: 1.5rem;
-      background-color: transparent;
-      color: var(--pink);
-      text-transform: uppercase;
-      padding-left: 1rem;
-      margin: 0;
-      font-family: 'Glacial Indifference';
-      letter-spacing: 4px;
+   .flagContainerUK {
+
+      font-size: 1.2rem;
+
    }
 
-   .search {
-      width: auto;
+   .uk-flag {
+      height: 22px;
+      width: 40px;
+      border-radius: 5px;
+      margin: 0 2rem 0 .5rem;
    }
-
-   .bookHeader {
-      font-size: 1.8rem;
-      transition: all 400ms;
-      background-color: var(--pink);
+   
+   .esp-flag {
+      height: 25px;
+      width: 50px;
+      border-radius: 5px;
+      margin: 0 .5rem 0 1.5rem;
    }
 }
-
 
 /* ---------------------------------------------------------------------------------------------------*/
 
-
 /* Estilos para Móviles */
-@media (max-width:600px) {
+@media (max-width: 600px) {
+	header {
+		display: flex;
+		justify-content: space-around;
+		gap: 0;
+		align-items: center;
+		padding: 0.5rem 1rem 0.5rem 0;
+		width: 100%;
+	}
 
-   header {
-      display: flex;
-      justify-content: space-around;
-      gap: 0;
-      align-items: center;
-      padding: .5rem 1rem .5rem 0;
-      width: 100%;
+	.logo {
+		width: 6rem;
+	}
+
+	.leonorContainer {
+		display: none;
+	}
+
+	.search {
+		width: auto;
+	}
+
+	.topHeader {
+		margin-bottom: 2rem;
+	}
+
+	.bookHeader {
+		font-size: 1.6rem;
+		transition: all 400ms;
+		background-color: var(--pink);
+		margin: 0rem;
+		border-radius: 0px;
+	}
+
+   .flagContainerES {
+      font-size: .8rem;
+		border-radius: 0px;
+		margin: 0;
+   }
+   
+   .flagContainerUK {
+
+      font-size: .8rem;
+	  border-radius: 0px;
+	  margin: 0;
+
    }
 
-   .logo {
-      width: 6rem;
+   .uk-flag {
+      height: 22px;
+      width: 30px;
+	  
+      border-radius: 5px;
+      margin: 0 1.5rem 0 .5rem;
    }
-
-   .leonorContainer {
-      display: none;
+   
+   .esp-flag {
+      height: 25px;
+      width: 30px;
+      border-radius: 5px;
+      margin: 0 .5rem 0 1.5rem;
    }
-
-   .search {
-      width: auto;
-   }
-
-   .bookHeader {
-      font-size: 1.6rem;
-      transition: all 400ms;
-      background-color: var(--pink);
-   }
-
 }
-
-
-
 
 /* header {
    display: grid;

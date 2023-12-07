@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { FaRegCaretSquareDown } from "react-icons/fa";
 import "./Navbar.css";
 import Link from "next/link";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
@@ -83,9 +84,7 @@ function Navbar() {
 				<li>
 					<Link href="/contact">Contact</Link>
 				</li>
-				<li>
-					<Link href="/contact">Language</Link>
-				</li>
+
 			</ul>
 		</nav>
 	);

@@ -56,7 +56,7 @@ async function Homeopathy() {
                 </section>
                 
                 <Image
-                    className="image-h bsp"
+                    className="image-h"
                     src={image}
                     alt="Home Page image"
                     width={2000}

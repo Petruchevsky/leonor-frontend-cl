@@ -21,7 +21,8 @@
     grid-area: image-h;
     width: 100%;
     border-radius: 20px;
-    margin: 0 auto;
+    margin: 8.8rem auto;
+    align-self: start;
 }
 
 .when-use-h {
@@ -52,6 +53,7 @@
     
     .image-h {
         width: 80%;
+        margin: 0 auto;
     }
     
     .parrafo{
@@ -80,6 +82,7 @@
     
     .image-h {
         width: 100%;
+        margin: 0 auto;
     }
     
     .parrafo{
@@ -109,6 +112,7 @@
     
     .image-h {
         width: 100%;
+        margin: 0 auto;
     }
     
     .parrafo{

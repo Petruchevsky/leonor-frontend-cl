@@ -12,8 +12,9 @@
 
 .img-testi {
     width: 70%;
-    border-radius: 10px;
-    margin: 0 auto;
+    border-radius: 15px;
+    margin: 4rem auto;
+
 }
 
 
@@ -36,6 +37,7 @@
 
     .img-testi {
         width: 80%;
+        margin: 2rem auto;
     }
 }
 
@@ -50,6 +52,7 @@
         height: 100%;
         margin: 0 auto;
         padding: 3rem 0 5rem 0;
+        z-index: 0;
     }
     
     .container-testi h1 {
@@ -59,6 +62,7 @@
 
     .img-testi {
         width: 80%;
+        margin: 1rem auto;
     }
 }
 
@@ -72,15 +76,17 @@
         width: 95%;
         height: 100%;
         margin: 0 auto;
-        padding: 2rem 0 5rem 0;
+        padding: 2rem 0 0rem 0;
     }
     
     .container-testi h1 {
         text-align: center;
         margin-bottom: 1rem;
+        z-index: 0;
     }
 
     .img-testi {
-        width: 100%;
+        width: 95%;
+        margin: 0rem auto;
     }
 }

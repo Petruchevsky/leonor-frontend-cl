@@ -47,19 +47,25 @@ async function Testimonials() {
 						patients..."
 					</h1>
 					<Image
-						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1697145963/Home_page_resized_373bd8b148.jpg"
+						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701094973/testimonials_page_resized_1fd8c5304b.jpg"
 						alt="imagen de homepage"
 						width={2000}
 						height={2000}
-                        className="bsp img-testi"
+						className="bsp img-testi"
 					/>
 				</div>
 			) : (
 				<div>
 					<h1>Testimonials</h1>
 
-                        <MySlider data={data} />
-                
+					<Image
+						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701094973/testimonials_page_resized_1fd8c5304b.jpg"
+						alt="imagen de homepage"
+						width={2000}
+						height={2000}
+						className="img-testi"
+					/>
+					<MySlider data={data} />
 				</div>
 			)}
 			<ErrorToast errorMsg={errorMsg} />

@@ -100,7 +100,7 @@ async function Footer() {
 			<div className="developedBy">
 				<Link href="/">Leonor B &copy;</Link>
 				<Link href="/">Developed by MBA Digital</Link>
-				<Link href="/privacy-police">Privacy Police</Link>
+				<Link href="/privacy-police">Privacy Policy</Link>
 			</div>
 		</footer>
 	);

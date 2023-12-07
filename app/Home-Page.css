@@ -54,7 +54,7 @@
     
     .selfie {
         grid-area: selfie;
-        align-self: end;
+        align-self: top;
         margin-left: auto;
         border-radius: 30px;
         width: 100%;
@@ -75,8 +75,9 @@
 
     .selfie {
         grid-area: selfie;
-        align-self: center;
-        border-radius: 30px;
+        align-self: start;
+        margin-top: 5.5rem;
+        border-radius: 15px;
         width: 100%;
     }
 
@@ -100,17 +101,17 @@
         "image image image image"
         "welcome welcome welcome welcome"
         "hhch hhch hhch hhch"
-        "about about selfie selfie";
+        "about about about selfie";
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(4, auto);
     }
 
     .selfie {
         grid-area: selfie;
-        align-self: end;
+        align-self: start;
         border-radius: 10px;
         width: 100%;
-        margin: auto;
+        margin: 5.5rem auto;
     }
 
     .about {
