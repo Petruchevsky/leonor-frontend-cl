@@ -51,7 +51,7 @@ async function Testimonials() {
 						alt="imagen de homepage"
 						width={2000}
 						height={2000}
-						className="bsp img-testi"
+						className="img-testi"
 					/>
 				</div>
 			) : (

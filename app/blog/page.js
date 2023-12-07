@@ -60,7 +60,7 @@ async function Blog() {
 						alt="imagen de homepage"
 						width={2000}
 						height={2000}
-                        className="bsp img-blog"
+                        className="img-blog"
 					/>
 				</div>
 			) : (
