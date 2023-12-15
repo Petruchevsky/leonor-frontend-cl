@@ -53,8 +53,68 @@ header {
 	letter-spacing: 4px;
 }
 
+.search-container {
+	position: relative;
+	width: 40rem;
+}
+
 .search {
-	width: auto;
+	width: 100%;
+}
+
+.search-results {
+	position: absolute; /* Posición absoluta para superponer */
+	top: 100; /* Justo debajo del input */
+	left: 0;
+	width: 100%; /* Mismo ancho que su contenedor */
+	display: flex;
+	flex-direction: column;
+	z-index: 9999; /* Asegura que esté sobre otros elementos */
+	border: solid 5px var(--lightgray);
+	border-radius: 30px;
+	visibility: hidden;
+	background-color: var(--lightpink);
+	margin: 1rem auto;
+  }
+
+  .search-results.active {
+	visibility: visible; /* Visible cuando hay resultados */
+  }
+
+.title-result {
+
+	text-align: center;
+	font-size: 1.6rem;
+	background-color: var(--pink);
+	color: white;
+	padding: 0 1.5rem;
+	margin: 1rem auto;
+	width: fit-content;
+	border-radius: 50px;
+}
+
+.result > a {
+	font-size: 2rem;
+}
+
+.result > a > p {
+	font-size: 14px !important;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: "red hat display";
+	font-size: 2.4rem;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	border-radius: 30px;
+}
+
+.result:hover, .result > a > p:hover {
+	background-color: var(--beige);
 }
 
 .bookHeaderContainer {

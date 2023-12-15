@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource/red-hat-display": "^5.0.13",
     "framer-motion": "^10.16.5",
+    "meilisearch": "^0.36.0",
     "next": "latest",
     "nodemailer": "^6.9.6",
     "react": "latest",

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import "./Header.css";
 import ErrorToast from "./ErrorToast";
+import SearchBar from "@/utils/Meilisearch";
+
 
 const getHeader = async () => {
 	try {
@@ -22,6 +24,8 @@ const getHeader = async () => {
 };
 
 async function Header() {
+
+
 	let data;
 	let errorMsg;
 
@@ -59,17 +63,10 @@ async function Header() {
 					<h2 className="onlineHomeopath">Online</h2>
 				</div>
 			</div>
+			
+			<SearchBar />
 
-			<form action="/search" method="get" className="search">
-				<input
-					type="text"
-					size={24}
-					id="search"
-					name="q"
-					placeholder="What are you looking for...?"
-				/>
-				<input type="submit" value="Go" />
-			</form>
+			
 		</header>
 	);
 }
