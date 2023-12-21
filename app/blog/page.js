@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const metadata = {
 	title: "Blog",
-	description: "Welcome to my Blog!",
+	description: "Bienvenido(a) a mi Blog!",
 };
 
 const getData = async () => {
@@ -53,7 +53,7 @@ async function Blog() {
 			{!data.length ? (
 				<div>
 					<h1>
-						"Aquí, Pronto podrás ver mis entradas de Blog..."
+						"Aquí, pronto podrás ver mis entradas de Blog..."
 					</h1>
 					<Image
 						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1697145963/Home_page_resized_373bd8b148.jpg"
@@ -73,7 +73,7 @@ async function Blog() {
                                 <Image src={post?.attributes?.image?.data?.attributes?.url} alt={`imagen de ${post?.attributes?.title}`} width={2000} height={2000} />
                                 <div className="post-text">
                                     <h1>{post?.attributes?.title}</h1>
-                                    <p>Created by Leonor Berdichevsky</p>
+                                    <p>Creado por Leonor Berdichevsky</p>
                                     <p>{formatDate(post?.attributes?.createdAt)}</p>
                                     <Markdown text={post?.attributes?.post.substring(0, 300) + '...'} />
                                     <Link href={`/blog/${post?.attributes?.url}`} className="link-button">Read The Full Post</Link>

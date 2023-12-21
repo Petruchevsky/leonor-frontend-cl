@@ -4,13 +4,13 @@ import "./consultations.css"
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-    title: "Consultations",
-    description: "Get mor info here",
+    title: "Dudas y Consultas",
+    description: "Obtén más información Aquí!",
 }
 
 const getConsultations = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/consultation`, {
+		const res = await fetch(`${process.env.STRAPI}/api/consultation-es`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
@@ -47,7 +47,7 @@ async function Consultations() {
 			<h1>{consultation}</h1>
 			<Markdown text={consultationText}/>
 
-			<Link className="link-button" href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
+			<Link className="link-button" href={`${process.env.SETMORE}`} target="_blank">
 				Book an Appointment
 			</Link>
 

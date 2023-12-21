@@ -4,13 +4,13 @@ import Markdown from "@/utils/Markdown";
 
 export const metadata = {
 	title: "Blog",
-	description: "Welcome to my Blog!",
+	description: "Bienvenido(a) a mi Blog!",
 };
 
 async function getPost(url) {
 	try {
 		const res = await fetch(
-			`${process.env.STRAPI}/api/blogs?filters[url]=${url}&populate=image`, {
+			`${process.env.STRAPI}/api/blog-esp?filters[url]=${url}&populate=image`, {
                 next: { tags: ["mi-etiqueta-de-cache"] },
             });
 
@@ -42,13 +42,13 @@ async function Post({ params }) {
 		minute: "2-digit",
 	};
 
-	const formatDate = date.toLocaleDateString("en-GB", options) + " hrs.";
+	const formatDate = date.toLocaleDateString("es-CL", options) + " hrs.";
 
 	return (
 
             <main className="post-container">
                 <h1>{title}</h1>
-                <p>Created by Leonor Berdichevsky</p>
+                <p>Creado por Leonor Berdichevsky</p>
                 <Image
                     src={image.data.attributes.url}
                     alt={`imagen de ${image.data.attributes.name}`}
