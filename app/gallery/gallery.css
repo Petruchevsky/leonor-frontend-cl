@@ -19,6 +19,13 @@
     border-radius: 10px;
 }
 
+.gallery-description {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+
 
 /* -------------------------------------------------------------------------------------- */
 /* Estilos Pantallas Grandes */
@@ -34,6 +41,11 @@
     .container-gallery h1 {
         text-align: center;
         margin-bottom: 2rem;
+    }
+
+    .gallery-description {
+        width: 80%;
+        padding-bottom: 2rem;
     }
 }
 
@@ -58,6 +70,11 @@
         text-align: center;
         margin-bottom: 2rem;
     }
+
+    .gallery-description {
+        width: 90%;
+        padding-bottom: 2rem;
+    }
 }
 
 
@@ -80,6 +97,11 @@
     .container-gallery h1 {
         text-align: center;
         margin-bottom: 1rem;
+    }
+
+    .gallery-description {
+        width: 95%;
+        padding-bottom: 2rem;
     }
 
 }

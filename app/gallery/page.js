@@ -65,7 +65,7 @@ async function Gallery() {
 			) : (
 				<div className="gallery">
 					<h1>{data?.attributes?.titulo}</h1>
-					<p>{data?.attributes?.descripcion}</p>
+					<p className="gallery-description">{data?.attributes?.descripcion}</p>
 					<MyGallery images={images} />
 
                         

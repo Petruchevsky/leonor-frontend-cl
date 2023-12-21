@@ -54,7 +54,7 @@ async function Consultations() {
 					</article>
 				))}
 			</section>
-			<h2>No dudes en comunicarte si tienes más preguntas que no se hayan abordado aquí.</h2>
+			<h1>No dudes en comunicarte si tienes más preguntas que no se hayan abordado aquí.</h1>
 			<Link className="link-button" href="/contact">
 				Contáctame
 			</Link>
