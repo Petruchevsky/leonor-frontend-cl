@@ -46,12 +46,21 @@ body {
 	padding: 7rem 0;
 }
 
+em {
+	font-style: normal; /* Eliminar el estilo itálico */
+	background-color: var(--pink);
+	color: white; /* Resaltar con color, por ejemplo */
+	padding: 0 .5rem;
+	border-radius: 5px;
+}
+  
+
 h1 {
 	font-size: 3.3rem;
 	color: var(--pink);
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	/* font-weight: bold; */
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 h2 {
@@ -363,7 +372,7 @@ form {
 	}
 	
 	h1 {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		margin-bottom: 2rem;
 	}
 	

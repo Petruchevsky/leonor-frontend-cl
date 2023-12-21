@@ -39,10 +39,10 @@ export async function POST(request) {
         // Enviando el correo
         await transporter.sendMail(mailOptions);
         // Retornando una respuesta exitosa
-        return NextResponse.json({ message: "¡Correo enviado con éxito!" });
+        return NextResponse.json({ message: "¡Message sent Successfully!" });
     } catch (error) {
         console.error("Error:", error);
         // Retornando una respuesta de error
-        return NextResponse.json({ error: "¡Oh no! Algo salió mal en el envío del correo" }, { status: 500 });
+        return NextResponse.json({ error: "¡Oh no! Something's Wrong with your Email" }, { status: 500 });
     }
 }

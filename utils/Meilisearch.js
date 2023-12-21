@@ -11,8 +11,10 @@ const client = new MeiliSearch({
 });
 
 function SearchBar() {
+
 	const [query, setQuery] = useState("");
 	const [searchResults, setSearchResults] = useState([]);
+	const [showResults, setShowResults] = useState(false);
 
 	useEffect(() => {
 		handleSearch();
@@ -75,6 +77,15 @@ function SearchBar() {
 		}
 	};
 
+	const handleFocus = () => {
+		setShowResults(true);
+	  };
+	  
+	  const handleBlur = () => {
+		// Retraso para permitir la selección de resultados antes de ocultarlos
+		setTimeout(() => setShowResults(false), 200);
+	  };
+
     const cleaning = () => {
         setQuery("");
     }
@@ -90,11 +101,13 @@ function SearchBar() {
 					placeholder="What are you looking for...?"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
+					onFocus={handleFocus}
+					onBlur={handleBlur}
 				/>
-				<input type="submit" value="Go" onClick={()=>{handleSearch(); cleaning();}} />
+				<input type="submit" value="Go" onClick={ ()=>{handleSearch();  }} />
 			</form>
 
-            <div className={`search-results ${searchResults.length > 0 ? 'active' : ''}`}>				{searchResults.map((result) =>
+            <div className={`search-results ${searchResults.length > 0 && showResults ? 'active' : ''}`}>				{searchResults.map((result) =>
 					result.type === "blog" ? (
 						<div key={result.id} className="result">
 							<p className="title-result">- Blog Entry -</p>

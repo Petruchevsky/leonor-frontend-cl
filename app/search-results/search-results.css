@@ -1,0 +1,102 @@
+.container-search-results {
+	width: 80%;
+	margin: 0 auto;
+	padding: 7rem 0;
+}
+
+.container-search-results > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.results-item > a > p {
+    margin: 0;
+}
+
+.results-item > a > h1 {
+    font-size: 3rem;
+}
+
+.results-item {
+    transition: all ease-in-out 200ms;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    border: solid 3px transparent;
+}
+
+.results-item:hover {
+	background-color: var(--beige);
+    border: solid 3px var(--lightgray);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+/* Estilos Pantallas Grandes y Laptos */
+/*-------------------------------------------------------------------------------------------------*/
+
+@media (max-width:2000px) and (min-width:1001px) {
+    
+    .container-search-results {
+        width: 80%;
+        margin: 0 auto;
+        padding: 5rem 0;
+    }
+    
+    .results-item > a > h1 {
+        font-size: 2.0rem;
+    }
+}
+
+/* Estilos para Tablets */
+/*-------------------------------------------------------------------------------------------------*/
+
+@media (max-width:1000px) and (min-width:601px) {
+    
+    .container-search-results {
+        width: 100%;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+
+    .results-item {
+        margin-bottom: 3rem;
+    }
+    
+    .results-item > a > h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Estilos para Celulares */
+/*-------------------------------------------------------------------------------------------------*/
+
+@media (max-width:600px) and (min-width:0px) {
+    
+    .container-search-results {
+        width: 100%;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+
+    .results-item {
+        margin-bottom: 0rem;
+    }
+    
+    .results-item > a > h1 {
+        font-size: 1.8rem;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+}

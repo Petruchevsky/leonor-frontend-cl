@@ -60,6 +60,7 @@ header {
 
 .search {
 	width: 100%;
+	margin: 0 auto;
 }
 
 .search-results {
@@ -82,7 +83,6 @@ header {
   }
 
 .title-result {
-
 	text-align: center;
 	font-size: 1.6rem;
 	background-color: var(--pink);
@@ -98,7 +98,7 @@ header {
 }
 
 .result > a > p {
-	font-size: 14px !important;
+	font-size: 16px !important;
 	line-height: 2rem;
 	margin-bottom: 1rem;
 }
@@ -113,7 +113,7 @@ header {
 	border-radius: 30px;
 }
 
-.result:hover, .result > a > p:hover {
+.result:hover {
 	background-color: var(--beige);
 }
 
@@ -127,7 +127,7 @@ header {
 	background-color: var(--pink);
 	padding: 1rem 0;
 	margin: 1rem 0rem;
-	border-radius: 50px;
+	border-radius: 10px;
 }
 
 .bookHeader:hover {
@@ -161,7 +161,7 @@ header {
 	padding-right: 2rem;
 	transition: all 300ms;
 	margin: 1rem 1rem;
-	border-radius: 50px;
+	border-radius: 10px;
 }
 
 .flagContainerUK {
@@ -174,7 +174,7 @@ header {
 	padding-left: 2rem;
 	transition: all 300ms;
 	margin: 1rem 1rem;
-	border-radius: 50px;
+	border-radius: 10px;
 }
 
 .flagContainerES:hover,
@@ -252,6 +252,30 @@ header {
 		margin: 0;
 		font-family: "Glacial Indifference";
 		letter-spacing: 4px;
+	}
+
+	.search-container {
+		position: relative;
+		width: fit-content;
+	}
+	
+	.search {
+		width: fit-content;
+		margin: 0 auto;
+	}
+	
+	.title-result {
+		font-size: 1.4rem;
+	}
+	
+	.result > a {
+		font-size: 1.6rem;
+	}
+	
+	.result > a > p {
+		font-size: 12px !important;
+		line-height: 2rem;
+		margin-bottom: 1rem;
 	}
 
 	.bookHeader {
@@ -339,8 +363,28 @@ header {
 		letter-spacing: 4px;
 	}
 
+	.search-container {
+		position: relative;
+		width: fit-content;
+	}
+	
 	.search {
-		width: auto;
+		width: fit-content;
+		margin: 0 auto;
+	}
+	
+	.title-result {
+		font-size: 1.4rem;
+	}
+	
+	.result > a {
+		font-size: 1.6rem;
+	}
+	
+	.result > a > p {
+		font-size: 12px !important;
+		line-height: 2rem;
+		margin-bottom: 1rem;
 	}
 
 	.bookHeader {
@@ -395,8 +439,28 @@ header {
 		display: none;
 	}
 
+	.search-container {
+		position: relative;
+		width: fit-content;
+	}
+	
 	.search {
-		width: auto;
+		width: fit-content;
+		margin: 0 auto;
+	}
+	
+	.title-result {
+		font-size: 1.4rem;
+	}
+	
+	.result > a {
+		font-size: 1.6rem;
+	}
+	
+	.result > a > p {
+		font-size: 12px !important;
+		line-height: 2rem;
+		margin-bottom: 1rem;
 	}
 
 	.topHeader {
