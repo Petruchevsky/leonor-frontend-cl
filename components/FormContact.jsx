@@ -28,7 +28,7 @@ function FormContact() {
             });
 
             if (!res.ok) {  // Verificar si la respuesta es ok
-                throw new Error('Something went wrong');
+                throw new Error('Something Went Wrong With Your Email');
             }
 
             setSuccessMsg("Message sent successfully!");  // Establecer mensaje de éxito
@@ -55,7 +55,7 @@ function FormContact() {
             <input type="submit" value="Send your Message" />
 
             {successMsg && <p className="successMsg">{successMsg}</p>}
-            {errorMsg && <p>{errorMsg}</p>}
+            {errorMsg && <p className="errorMsg">{errorMsg}</p>}
 
             <ErrorToast errorMsg={errorMsg} successMsg={successMsg} />
         </form>
