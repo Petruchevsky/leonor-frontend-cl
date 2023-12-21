@@ -104,7 +104,7 @@ function SearchBar() {
 					onFocus={handleFocus}
 					onBlur={handleBlur}
 				/>
-				<input type="submit" value="Ir" onClick={ ()=>{handleSearch();  }} />
+				<input type="submit" value="Ir..." onClick={ ()=>{handleSearch();  }} />
 			</form>
 
             <div className={`search-results ${searchResults.length > 0 && showResults ? 'active' : ''}`}>				{searchResults.map((result) =>

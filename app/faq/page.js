@@ -10,7 +10,7 @@ export const metadata = {
 
 const getConsultations = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/faq-es?_sort=id:asc`, {
+		const res = await fetch(`${process.env.STRAPI}/api/faq-esp?_sort=id:asc`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
