@@ -10,7 +10,7 @@ export const metadata = {
 
 const getData = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/testimonials`, {
+		const res = await fetch(`${process.env.STRAPI}/api/testimonios`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
