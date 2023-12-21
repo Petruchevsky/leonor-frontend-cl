@@ -4,13 +4,13 @@ import Link from "next/link";
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-	title: "Privacy Police",
-	description: "Your Privacy is very important to me.",
+	title: "Póliza de Privacidad",
+	description: "Tu Privacidad es muy importante para mí.",
 };
 
 const getData = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/privacy-police`, {
+		const res = await fetch(`${process.env.STRAPI}/api/privacy-policy-es`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
@@ -46,7 +46,7 @@ async function PrivacyPolice() {
     <main className="container-privacy">
         <h1>{privacyPolice}</h1>
         <Markdown text={privacyPoliceText} />
-        <Link className="link-button" href="/contact">Get in Touch</Link>
+        <Link className="link-button" href="/contact">Contáctame</Link>
       <ErrorToast errorMsg={errorMsg} />
     </main>
   )

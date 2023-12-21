@@ -4,8 +4,8 @@ import Image from "next/image";
 import MySlider from "@/components/MySlider";
 
 export const metadata = {
-	title: "Testimonials",
-	description: "What People Say!",
+	title: "Testimonios",
+	description: "Mira lo que la Gente Dice!",
 };
 
 const getData = async () => {
@@ -43,8 +43,7 @@ async function Testimonials() {
 			{!data.length ? (
 				<div>
 					<h1>
-						"Here, you will soon be able to see testimonials from our
-						patients..."
+						"Aquí, pronto podrás ver los testimonios de nuestros pacientes..."
 					</h1>
 					<Image
 						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701094973/testimonials_page_resized_1fd8c5304b.jpg"
@@ -56,7 +55,7 @@ async function Testimonials() {
 				</div>
 			) : (
 				<div>
-					<h1>Testimonials</h1>
+					<h1>Testimonios</h1>
 
 					<Image
 						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701094973/testimonials_page_resized_1fd8c5304b.jpg"

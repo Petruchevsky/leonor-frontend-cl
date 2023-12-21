@@ -5,13 +5,13 @@ import Link from "next/link";
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-	  title: "Leonor-B Homeopath Online",
-	  description: "Welcome to my Site",
+	  title: "Inicio",
+	  description: "Bienvenido(a) a mi sitio web!)",
   }
 
 const getData = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/home?populate=*`, {
+		const res = await fetch(`${process.env.STRAPI}/api/home-es?populate=*`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
@@ -68,7 +68,7 @@ async function Home() {
 				<h1>{hhch}</h1>
 				<Markdown text={hhchText} />
 				<Link className="link-button" href="/homeopathy">
-					Learn More
+					Aprender Más
 				</Link>
 			</section>
 
@@ -76,7 +76,7 @@ async function Home() {
 				<h1>{about}</h1>
 				<Markdown text={aboutText} />
 				<Link className="link-button" href="/consultations">
-					Consultations
+					Consultas
 				</Link>
 			</section>
 

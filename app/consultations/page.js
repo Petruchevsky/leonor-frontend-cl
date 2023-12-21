@@ -1,12 +1,12 @@
 import ErrorToast from "@/components/ErrorToast";
 import Link from "next/link";
-import "./consultations.css"
+import "./consultations.css";
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-    title: "Dudas y Consultas",
-    description: "Obtén más información Aquí!",
-}
+	title: "Dudas y Consultas",
+	description: "Obtén más información Aquí!",
+};
 
 const getConsultations = async () => {
 	try {
@@ -43,15 +43,18 @@ async function Consultations() {
 
 	return (
 		<main className="consultations-container">
-
 			<h1>{consultation}</h1>
-			<Markdown text={consultationText}/>
+			<Markdown text={consultationText} />
 
-			<Link className="link-button" href={`${process.env.SETMORE}`} target="_blank">
-				Book an Appointment
+			<Link
+				className="link-button"
+				href={`${process.env.SETMORE}`}
+				target="_blank"
+			>
+				Reserva tu Hora{" "}
 			</Link>
 
-            <ErrorToast errorMsg={errorMsg} />
+			<ErrorToast errorMsg={errorMsg} />
 		</main>
 	);
 }

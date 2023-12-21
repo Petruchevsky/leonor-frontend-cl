@@ -3,28 +3,28 @@ import "./contact.css";
 import FormContact from "@/components/FormContact";
 
 export const metadata = {
-	title: "Contact",
-	description: "Please Get in Touch!",
+	title: "Contacto",
+	description: "Por favor mantente en Contacto!",
 };
 
 function Contact() {
 	return (
 		<main className="contact-container">
 			<section>
-				<h1>Get in Touch</h1>
-				<p>You can contact me via e-mail.</p>
+				<h1>Mantente en Contacto</h1>
+				<p>Puedes escribirme vía e-mail.</p>
 				<Link
 					className="link-button"
-					href="mailto:contact@leonorb-homeopath.uk?subject=Enquiry"
+					href="mailto:contacto@leonorb-homeopata.com?subject=Consulta"
 					target="_blank"
 				>
-					contact@leonorb-homeopath.uk
+					contacto@leonorb-homeopata.com
 				</Link>
 				<p>
-					My working hours are Monday - Friday (Exc Wednesdays) from 10 am - 5 pm
-					GMT.{" "}
+					Mi horario de trabajo es de Lunes a Friday (Excepto Miércoles) de 10 am a 5 pm
+					GMT 3 (Chile).{" "}
 				</p>
-				<p>I will do my best to respond to you as quickly as possible.</p>
+				<p>Haré lo mejor para responder tus consultas lo antes posible.</p>
 			</section>
 
             <section>

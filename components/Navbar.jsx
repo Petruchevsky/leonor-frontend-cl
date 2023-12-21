@@ -31,11 +31,11 @@ function Navbar() {
 		<nav className={`${isOpen ? "overlay" : ""}`}>
 			<div className="mobileNav">
 				<ImMenu3 className="burger" onClick={() => setIsOpen(!isOpen)} />
-				<h2 className="onlineHomeo">Online Homeopath</h2>
+				<h2 className="onlineHomeo">Homeopatía Online</h2>
 			</div>
 			<ul className={`menu ${isOpen ? "showMenu" : "hideMenu"}`}>
 				<li>
-					<Link href="/">Home</Link>
+					<Link href="/">Inicio</Link>
 				</li>
 
 				<li className="flex-col relative">
@@ -46,7 +46,7 @@ function Navbar() {
 						/>
 
 						<span onClick={() => router.push("/consultations")}>
-							Consultations
+							Consultas
 						</span>
 					</div>
 
@@ -56,24 +56,24 @@ function Navbar() {
 						}`}
 					>
 						<li>
-							<Link href="/fees">Fees</Link>
+							<Link href="/fees">Cobros</Link>
 						</li>
 						<li>
 							<Link href="/terms-and-conditions">T&C's</Link>
 						</li>
 						<li>
-							<Link href="/privacy-police">Privacy Police</Link>
+							<Link href="/privacy-police">Póliza de Privacidad</Link>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<Link href="/homeopathy">Homeopathy</Link>
+					<Link href="/homeopathy">Homeopatía</Link>
 				</li>
 				<li>
-					<Link href="/testimonials">Testimonials</Link>
+					<Link href="/testimonials">Testimonios</Link>
 				</li>
 				<li>
-					<Link href="/gallery">Gallery</Link>
+					<Link href="/gallery">Galería</Link>
 				</li>
 				<li>
 					<Link href="/blog">Blog</Link>
@@ -82,7 +82,7 @@ function Navbar() {
 					<Link href="/faq">FAQ</Link>
 				</li>
 				<li>
-					<Link href="/contact">Contact</Link>
+					<Link href="/contact">Contacto</Link>
 				</li>
 
 			</ul>

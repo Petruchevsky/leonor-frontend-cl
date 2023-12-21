@@ -5,13 +5,13 @@ import ErrorToast from "@/components/ErrorToast";
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-    title: "Homeopathy",
-    description: "What is Homeopathy?",
+    title: "Homeopatía",
+    description: "Qué es la Homeopatía?",
 }
 
 const getHomeopathy = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/homeopathy?populate=*`, {
+		const res = await fetch(`${process.env.STRAPI}/api/homeopathy-es?populate=*`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 

@@ -5,7 +5,7 @@ import ErrorToast from "./ErrorToast";
 
 const getFooter = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/home?populate=*`, {
+		const res = await fetch(`${process.env.STRAPI}/api/home-es?populate=*`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 		if (!res.ok) {
@@ -39,12 +39,12 @@ async function Footer() {
 			<div className="container-footer">
 				<ErrorToast errorMsg={errorMsg} />
 				<Link
-					href="https://leonorb-homeopath.setmore.com/leonorberdichevsky"
+					href={`${process.env.SETMORE}`}
 					target="_blank"
 					className="book-footer"
 				>
 					<h2 className="book-footer">
-						<span>Book</span> Your Appointment Today
+						<span>Reserva</span> Tu Hora Hoy Mismo!
 					</h2>
 				</Link>
 
@@ -63,7 +63,7 @@ async function Footer() {
 							<h3 className="leonorBFooter">Berdichevsky</h3>
 						</div>
 						<div className="HOnlineContainerFooter">
-							<h2 className="onlineHomeopathFooter">Homeopathy</h2>
+							<h2 className="onlineHomeopathFooter">Homeopatía</h2>
 							<h2 className="onlineHomeopathFooter">Online</h2>
 						</div>
 					</div>
@@ -99,8 +99,8 @@ async function Footer() {
 			</div>
 			<div className="developedBy">
 				<Link href="/">Leonor B &copy;</Link>
-				<Link href="/">Developed by MBA Digital</Link>
-				<Link href="/privacy-police">Privacy Policy</Link>
+				<Link href="/">Desarrollado por MBA Digital</Link>
+				<Link href="/privacy-police">Póliza de Privacidad</Link>
 			</div>
 		</footer>
 	);

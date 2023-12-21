@@ -4,14 +4,14 @@ import "./fees.css";
 import Markdown from "@/utils/Markdown";
 
 export const metadata = {
-	title: "Fees",
-	description: "About fees",
+	title: "Precios",
+	description: "Sobre Precios y Cobros",
 };
 
 const getData = async () => {
 	
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/fee?`, {
+		const res = await fetch(`${process.env.STRAPI}/api/fees-es?`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
@@ -25,7 +25,7 @@ const getData = async () => {
 		return data;
 
 	} catch (error) {
-		console.error(`Error getting data: ${error.message}`);
+		console.error(`Error Obteniendo los Datos: ${error.message}`);
 		throw error;
 	}
 };
@@ -58,36 +58,34 @@ async function page() {
 				<div>
 					<h2>{newClient}</h2>
 					<h1>£{newClientPrice}</h1>
-					<Link className="link-button" href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
-						Book an Appointment
+					<Link className="link-button" href={`${process.env.SETMORE}`} target="_blank">
+						Reserva tu Hora
 					</Link>
 				</div>
 				<div>
 					<h2>{existingClient}</h2>
 					<h1>£{existingClientPrice}</h1>
-					<Link className="link-button" href="https://leonorb-homeopath.setmore.com/leonorberdichevsky" target="_blank">
-						Book an Appointment
+					<Link className="link-button" href={`${process.env.SETMORE}`} target="_blank">
+						Reserva tu Hora
 					</Link>
 				</div>
 			</section>
 
 			<section className="questions">
-				<h1>Still have questions?</h1>
+				<h1>Aún tienes Dudas?</h1>
 				<div>
 					<p>
-						For general information, try the{" "}
-						<Link className="link" href="/homeopathy">Homeopathy</Link>{" "}
-						or <Link className="link" href="/faq">FAQ</Link> pages.
+						Para Información general, ingresa a {" "}
+						<Link className="link" href="/homeopathy">Homeopatía</Link>{" "}
+						o a la sección de <Link className="link" href="/faq">Preguntas Frecuentes</Link>.
 					</p>
                     <br />
 					<p>
-						Or if you're interested in a particular condition, why not check out
-						the <Link className="link" href="/blog">Blog</Link>...?
+						O si estás interesado en un caso en particular, por qué no intentas buscarlo en nuestro <Link className="link" href="/blog">Blog</Link>...?
 					</p>
                     <br />
 					<p>
-						Otherwise feel free to <Link className="link" href="/contact">Get In Touch</Link> if
-						it's something specific.
+						De todas maneras si lo deseas,  <Link className="link" href="/contact">Contáctame</Link> para darte información más específica sobre tu caso.
 					</p>
 				</div>
 			</section>

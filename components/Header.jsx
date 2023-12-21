@@ -6,7 +6,7 @@ import SearchBar from "@/utils/Meilisearch";
 
 const getHeader = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/home?populate=*`, {
+		const res = await fetch(`${process.env.STRAPI}/api/home-es?populate=*`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 		if (!res.ok) {
@@ -59,7 +59,7 @@ async function Header() {
 					<h3 className="leonorB">Berdichevsky</h3>
 				</div>
 				<div className="HOnlineContainer">
-					<h2 className="onlineHomeopath">Homeopathy</h2>
+					<h2 className="onlineHomeopath">Homeopatía</h2>
 					<h2 className="onlineHomeopath">Online</h2>
 				</div>
 			</div>

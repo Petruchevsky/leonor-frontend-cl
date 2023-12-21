@@ -98,25 +98,25 @@ function SearchBar() {
 					size={24}
 					id="search"
 					name="q"
-					placeholder="What are you looking for...?"
+					placeholder="Qué Estás Buscando...?"
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					onFocus={handleFocus}
 					onBlur={handleBlur}
 				/>
-				<input type="submit" value="Go" onClick={ ()=>{handleSearch();  }} />
+				<input type="submit" value="Ir" onClick={ ()=>{handleSearch();  }} />
 			</form>
 
             <div className={`search-results ${searchResults.length > 0 && showResults ? 'active' : ''}`}>				{searchResults.map((result) =>
 					result.type === "blog" ? (
 						<div key={result.id} className="result">
-							<p className="title-result">- Blog Entry -</p>
+							<p className="title-result">- Entrada de Blog -</p>
 							<Link href={result.path}>{result.title}</Link>
-							<Link href={result.path} ><Markdown text={result.post.split(' ').slice(0, 50).join(' ') + ' ...Read more...'} /></Link>
+							<Link href={result.path} ><Markdown text={result.post.split(' ').slice(0, 50).join(' ') + ' ...Leer Más...'} /></Link>
 						</div>
 					) : (
 						<div key={result.id} className="result">
-							<p className="title-result">- Site Route -</p>
+							<p className="title-result">- Ruta del Sitio -</p>
 							<Link href={result.path}>{result.title}</Link>
 						</div>
 					)

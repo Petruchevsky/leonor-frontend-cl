@@ -20,7 +20,7 @@ function SearchResultsPage() {
 		if (!query) return;
 
 		async function fetchResults() {
-			const index = client.index("blog");
+			const index = client.index("blog-es");
 			const response = await index.search(query, {
 				attributesToHighlight: ["title", "post"],
 			});
@@ -32,7 +32,7 @@ function SearchResultsPage() {
 
 	return (
 		<div className="container-search-results">
-			<h1>Search Results</h1>
+			<h1>Resultados de Búsqueda</h1>
 			{searchResults.map((result, index) => (
 				<div className="results-item">
                     <Link  key={index} href={`/blog/${result.url}`}>
@@ -41,15 +41,15 @@ function SearchResultsPage() {
                         ></h1>
                         <Markdown text={
                                     result._formatted.post.split(" ").slice(0, 150).join(" ") +
-                                    " ...Read more..." }
+                                    " ...Leer Más..." }
                         />
                     </Link>
                 </div>
 			))}
         <div className="buttons-container">
-                <Link href="/blog" className="link-button">Back to Blog</Link>
-                <Link href="/setmore/LeonorB" className="link-button">Book an Appointment</Link>
-                <Link href="/contact" className="link-button">Get in Touch!</Link>
+                <Link href="/blog" className="link-button">Volver al Blog</Link>
+                <Link href={`${process.env.SETMORE}`} className="link-button">Reserva tu Hora</Link>
+                <Link href="/contact" className="link-button">Contáctame!</Link>
         </div>
 		</div>
 	);

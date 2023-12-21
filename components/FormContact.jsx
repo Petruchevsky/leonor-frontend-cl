@@ -28,10 +28,10 @@ function FormContact() {
             });
 
             if (!res.ok) {  // Verificar si la respuesta es ok
-                throw new Error('Something Went Wrong With Your Email');
+                throw new Error('Algo salió Mal con tu Email');
             }
 
-            setSuccessMsg("Message sent successfully!");  // Establecer mensaje de éxito
+            setSuccessMsg("Mensaje Enviado Exitosamente!");  // Establecer mensaje de éxito
             setName("")
             setEmail("")
             setSubject("")
@@ -48,11 +48,11 @@ function FormContact() {
 
     return (
         <form className="form-contact" onSubmit={handleSubmit}>
-            <input type="text" value={name} placeholder="Enter your Name" onChange={(e) => setName(e.target.value)} required />
-            <input type="email" value={email} placeholder="Enter your Email" onChange={(e) => setEmail(e.target.value)} required />
-            <input type="text" value={subject} placeholder="Enter a Subject" onChange={(e) => setSubject(e.target.value)} required />
-            <textarea value={message} placeholder="Enter your Message" onChange={(e) => setMessage(e.target.value)} required />
-            <input type="submit" value="Send your Message" />
+            <input type="text" value={name} placeholder="Ingresa tu Nombre" onChange={(e) => setName(e.target.value)} required />
+            <input type="email" value={email} placeholder="Ingresa tu Email" onChange={(e) => setEmail(e.target.value)} required />
+            <input type="text" value={subject} placeholder="Asunto" onChange={(e) => setSubject(e.target.value)} required />
+            <textarea value={message} placeholder="Escribe tu Mensaje..." onChange={(e) => setMessage(e.target.value)} required />
+            <input type="submit" value="Enviar Mensaje" />
 
             {successMsg && <p className="successMsg">{successMsg}</p>}
             {errorMsg && <p className="errorMsg">{errorMsg}</p>}

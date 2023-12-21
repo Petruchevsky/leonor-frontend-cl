@@ -5,20 +5,20 @@ import Markdown from "@/utils/Markdown";
 
 export const metadata = {
 	title: "FAQ's",
-	description: "Frecuently Asked Questions",
+	description: "Preguntas Frecuentes",
 };
 
 const getConsultations = async () => {
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/faqs?_sort=id:asc`, {
+		const res = await fetch(`${process.env.STRAPI}/api/faq-es?_sort=id:asc`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
 		if (!res.ok) {
 			const errorData = await res.json();
 
-			if(errorData.error.status === 404) errorData.message = "No data found";
-			if(errorData.error.status === 500) errorData.message = "Internal Backend Server Error";
+			if(errorData.error.status === 404) errorData.message = "Datos no Encontrados";
+			if(errorData.error.status === 500) errorData.message = "Error interno del Servidor Backend";
 
 			const errorMessage = `Error ${res.status}: ${errorData.message}`;
 			throw new Error(errorMessage);
@@ -28,7 +28,7 @@ const getConsultations = async () => {
 		data.sort((a, b) => a.id - b.id);
 		return data;
 	} catch (error) {
-		console.error(`Error getting data: ${error.message}`);
+		console.error(`Error Obteniendo los Datos: ${error.message}`);
 		throw error;
 	}
 };
@@ -45,7 +45,7 @@ async function Consultations() {
 
 	return (
 		<main className="faq-container">
-			<h1>Frequently Asked Questions</h1>
+			<h1>Preguntas Frecuentes</h1>
 			<section>
 				{data?.map((question) => (
 					<article>
@@ -54,9 +54,9 @@ async function Consultations() {
 					</article>
 				))}
 			</section>
-			<h2>Still have unanswered questions?</h2>
+			<h2>No dudes en comunicarte si tienes más preguntas que no se hayan abordado aquí.</h2>
 			<Link className="link-button" href="/contact">
-				Get in Touch
+				Contáctame
 			</Link>
 
 			<ErrorToast errorMsg={errorMsg} />

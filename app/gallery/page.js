@@ -4,8 +4,8 @@ import Image from "next/image";
 import MyGallery from "@/components/MyGallery";
 
 export const metadata = {
-	title: "Media Gallery",
-	description: "We can be better, everyday!",
+	title: "Galería de Imágenes",
+	description: "Podemos sentirnos mejor, Cada Día!",
 };
 
 const getData = async () => {
@@ -17,8 +17,8 @@ const getData = async () => {
 		if (!res.ok) {
 			const errorData = await res.json();
 			console.log(errorData.error.status)
-			if(res.status === 404) errorData.error.message = "Nothing Here... Yet!"
-			if(res.status === 500) errorData.error.message = "Backend Server is No Responding Well!!"
+			if(res.status === 404) errorData.error.message = "Nada aquí... Aún!"
+			if(res.status === 500) errorData.error.message = "El Servidor Backend No Responde!!"
 			const errorMessage = `${res.status}: ${errorData.error.message}`;
 			console.log(res)
 			throw new Error(errorMessage);
@@ -52,8 +52,7 @@ async function Gallery() {
 			{(!data?.attributes?.image?.data || !data) ? (
 				<div className="container-gallery-empty">
 					<h1>
-						"Here, you will soon be able to see images from our
-						patients..."
+						"Aquí, proto podrás ver imágenes de nuestros pacientes..."
 					</h1>
 					<Image
 						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1697145963/Home_page_resized_373bd8b148.jpg"
@@ -65,7 +64,8 @@ async function Gallery() {
 				</div>
 			) : (
 				<div className="gallery">
-					<h1>{data?.attributes?.title}</h1>
+					<h1>{data?.attributes?.titulo}</h1>
+					<p>{data?.attributes?.descripcion}</p>
 					<MyGallery images={images} />
 
                         
