@@ -37,6 +37,10 @@ function FormContact() {
             setSubject("")
             setMessage("")
 
+            setTimeout(() => {
+                location.reload();
+            }, 5000);
+
         } catch (error) {
             setErrorMsg(error.message);  // Establecer mensaje de error
         }

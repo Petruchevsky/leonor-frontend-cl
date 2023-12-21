@@ -9,7 +9,7 @@ function ErrorToast({ errorMsg, successMsg }) {
 		}
 
 		if (successMsg) {
-			toast.error(`${successMsg}`);
+			toast.success(`${successMsg}`);
 		}
 	}, [errorMsg, successMsg]);
 
