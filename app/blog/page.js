@@ -12,7 +12,7 @@ export const metadata = {
 const getData = async () => {
 
 	try {
-		const res = await fetch(`${process.env.STRAPI}/api/blogs?populate=*`, {
+		const res = await fetch(`${process.env.STRAPI}/api/blog-esp?populate=*`, {
 			next: { tags: ["mi-etiqueta-de-cache"] },
 		});
 
@@ -38,7 +38,7 @@ async function Blog() {
 
 	function formatDate(isoDate) {
 		const date = new Date(isoDate);
-		const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		const days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 		return `${days[date.getUTCDay()]} ${date.getUTCDate().toString().padStart(2, '0')}/${(date.getUTCMonth() + 1).toString().padStart(2, '0')}/${date.getUTCFullYear()}`;
 	  }	  
 
@@ -53,7 +53,7 @@ async function Blog() {
 			{!data.length ? (
 				<div>
 					<h1>
-						"Here, you will soon be able to see my blog's entries..."
+						"Aquí, Pronto podrás ver mis entradas de Blog..."
 					</h1>
 					<Image
 						src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1697145963/Home_page_resized_373bd8b148.jpg"
@@ -66,7 +66,7 @@ async function Blog() {
 			) : (
 				<div className="blog">
 					<h1>Blog</h1>
-					<p>"Here you can see different posts in which you can understand in more detail the scope of my treatment"</p>
+					<p>"Aquí puedes ver diferentes artículos para entender mejor el alcance de mi tratamiento..."</p>
                     <section>
                         {data?.map(post=>(
                             <article className="post">

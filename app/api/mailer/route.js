@@ -29,7 +29,7 @@ export async function POST(request) {
                 <h2>${subject}</h2>
                 <h4><strong>${message}</strong></h4>
                 <br/><br/><br/><br/>
-                <h5>This message was sent by ${name} through the contact form of Leonor B Homeopath.</h5>
+                <h5>Este mensaje fue enviado por ${name} através del formulario de contacto de Leonor Berdichevsky Homeopata Online.</h5>
             </div>
             <img src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701215920/pie_de_mail_25f6c9e49a.jpg" alt="imagen de pie de email" style="width:100%; position:absolute; bottom:0; box-shadow:0 0 10px white; margin:0 auto" />
         `,
@@ -39,10 +39,10 @@ export async function POST(request) {
         // Enviando el correo
         await transporter.sendMail(mailOptions);
         // Retornando una respuesta exitosa
-        return NextResponse.json({ message: "¡Message sent Successfully!" });
+        return NextResponse.json({ message: "¡Mensaje Enviado Exitosamente!" });
     } catch (error) {
         console.error("Error:", error);
         // Retornando una respuesta de error
-        return NextResponse.json({ error: "¡Oh no! Something's Wrong with your Email" }, { status: 500 });
+        return NextResponse.json({ error: "¡Oh no! Algo salió Mal con tu Email" }, { status: 500 });
     }
 }
