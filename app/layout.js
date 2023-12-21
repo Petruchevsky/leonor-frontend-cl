@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 				<div className="topHeader">
 					<Link
 						className="flagContainerES"
-						href="https://www.leonorb-homeopata.cl"
+						href="https://leonor-frontend-cl.vercel.app/"
 					>
 						<Image
 							src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701951143/ESP_Flag_3119969f4f.png"
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
 					</Link>
 					<Link
 						className="flagContainerUK"
-						href="https://www.leonorb-homeopath.uk"
+						href="https://leonor-frontend.vercel.app/"
 					>
 						EN
 						<Image
