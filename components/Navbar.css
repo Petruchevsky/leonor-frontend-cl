@@ -24,18 +24,6 @@
 	.dropdown li a {
 		font-size: 2.5rem !important;
 	}
-
-	.uk-flag {
-		height: 35px;
-		width: 50;
-		border-radius: 5px;
-	}
-
-	.esp-flag {
-		height: 35px;
-		width: 50;
-		border-radius: 5px;
-	}
 }
 
 
@@ -260,6 +248,8 @@ nav ul li span:hover {
 		position: absolute;
 		top: 150%;
 		left: 6%;
+		pointer-events: none;
+		cursor: default;
 	}
 
 	.menu {
