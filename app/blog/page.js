@@ -51,7 +51,7 @@ async function Blog() {
 	return (
 		<main className="container-blog">
 			{!data.length ? (
-				<div>
+				<div className="blog-vacio">
 					<h1>
 						"Aquí, pronto podrás ver mis entradas de Blog..."
 					</h1>

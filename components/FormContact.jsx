@@ -16,6 +16,9 @@ function FormContact() {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setErrorMsg(null);
+        setSuccessMsg(null);
+
         const data = { name, email, subject, message };  // Definir data
 
         try {
@@ -27,22 +30,31 @@ function FormContact() {
                 body: JSON.stringify(data),
             });
 
-            if (!res.ok) {  // Verificar si la respuesta es ok
+            if (!res.ok) {
                 throw new Error('Algo salió Mal con tu Email');
             }
 
-            setSuccessMsg("Mensaje Enviado Exitosamente!");  // Establecer mensaje de éxito
-            setName("")
-            setEmail("")
-            setSubject("")
-            setMessage("")
+            setSuccessMsg("Mensaje Enviado Exitosamente!");
+          
 
             setTimeout(() => {
-                location.reload();
-            }, 5000);
+                setName("")
+                setEmail("")
+                setSubject("")
+                setMessage("")
+                setSuccessMsg("Te responderemos lo antes posible!");
+            }, 4000);
 
         } catch (error) {
-            setErrorMsg(error.message);  // Establecer mensaje de error
+            setErrorMsg(error.message);
+
+            setTimeout(() => {
+                setName("")
+                setEmail("")
+                setSubject("")
+                setMessage("")
+                setErrorMsg("Por favor refresca la página, e inténtalo de nuevo...");
+            }, 4000);
         }
     }
 

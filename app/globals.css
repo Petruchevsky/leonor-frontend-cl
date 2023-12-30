@@ -28,7 +28,10 @@ html {
 
 body {
 
-	min-height: auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-between;
 	color: var(--darkgray);
 	background: linear-gradient(
 		to bottom,
@@ -86,29 +89,6 @@ p {
 	letter-spacing: .5px;
 	line-height: 4rem;
 	margin-bottom: 3rem;
-}
-
-button {
-	background-color: var(--darkgray);
-	color: var(--lightpink);
-	border: none;
-	cursor: pointer;
-	font-family: "Raleway", Arial, Helvetica, sans-serif;
-	font-size: 1.6rem;
-	font-weight: bold;
-	letter-spacing: 0.6px;
-	text-transform: uppercase;
-	transition: all 300ms;
-	box-shadow: 3px -3px 10px var(--shadowcolor);
-	padding: 0.7rem 1.2rem;
-	border-radius: 50px;
-}
-
-button:hover {
-	background-color: var(--darkorange);
-	color: white;
-	border: solid 1px --orange;
-	box-shadow: 0 0 15px black;
 }
 
 label {
@@ -233,22 +213,6 @@ form {
 		margin-bottom: 2rem;
 	}
 	
-	button {
-		background-color: var(--darkgray);
-		color: var(--lightpink);
-		border: none;
-		cursor: pointer;
-		font-family: "Raleway", Arial, Helvetica, sans-serif;
-		font-size: 1.6rem;
-		font-weight: bold;
-		letter-spacing: 0.6px;
-		text-transform: uppercase;
-		transition: all 300ms;
-		box-shadow: 3px -3px 10px var(--shadowcolor);
-		padding: 0.7rem 1.2rem;
-		border-radius: 50px;
-	}
-	
 	label {
 	 display: none;
 	}
@@ -313,22 +277,6 @@ form {
 		margin-bottom: 2rem;
 	}
 	
-	button {
-		background-color: var(--darkgray);
-		color: var(--lightpink);
-		border: none;
-		cursor: pointer;
-		font-family: "Raleway", Arial, Helvetica, sans-serif;
-		font-size: 1.6rem;
-		font-weight: bold;
-		letter-spacing: 0.6px;
-		text-transform: uppercase;
-		transition: all 300ms;
-		box-shadow: 3px -3px 10px var(--shadowcolor);
-		padding: 0.7rem 1.2rem;
-		border-radius: 50px;
-	}
-	
 	label {
 	 display: none;
 	}
@@ -390,22 +338,6 @@ form {
 		font-size: 1.4rem;
 		line-height: 2.3rem;
 		margin-bottom: 2rem;	
-	}
-	
-	button {
-		background-color: var(--darkgray);
-		color: var(--lightpink);
-		border: none;
-		cursor: pointer;
-		font-family: "Raleway", Arial, Helvetica, sans-serif;
-		font-size: 1.6rem;
-		font-weight: bold;
-		letter-spacing: 0.6px;
-		text-transform: uppercase;
-		transition: all 300ms;
-		box-shadow: 3px -3px 10px var(--shadowcolor);
-		padding: 0.7rem 1.2rem;
-		border-radius: 50px;
 	}
 	
 	label {

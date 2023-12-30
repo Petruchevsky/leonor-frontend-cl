@@ -478,13 +478,15 @@ footer {
 	}
 
 	.developedBy {
-		padding: 0 2rem;
+		padding: .2rem 1rem;
+		justify-content: space-between;
+	}
+
+	.developedBy a {
+		font-size: 8px;
 	}
 
 	.developedBy p {
-		font-size: 10px;
-	}
-	.developedBy a {
 		font-size: 10px;
 	}
 

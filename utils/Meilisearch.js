@@ -103,6 +103,7 @@ function SearchBar() {
 					onChange={(e) => setQuery(e.target.value)}
 					onFocus={handleFocus}
 					onBlur={handleBlur}
+					required
 				/>
 				<input type="submit" value="Ir..." onClick={ ()=>{handleSearch();  }} />
 			</form>
