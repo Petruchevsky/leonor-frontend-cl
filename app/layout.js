@@ -40,8 +40,8 @@ export default function RootLayout({ children }) {
 							height={50}
 							className="esp-flag"
 						/>
-						ES
 					</Link>
+
 					<Link
 						href={`${process.env.SETMORE}`}
 						target="_blank"
@@ -51,11 +51,11 @@ export default function RootLayout({ children }) {
 							Click<span>Aquí</span>para reservar tu Nueva Hora o continuar con tu Tratamiento.
 						</h2>
 					</Link>
+
 					<Link
 						className="flagContainerUK"
 						href="https://leonor-frontend.vercel.app/"
 					>
-						EN
 						<Image
 							src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701951143/UK_Flag_1c46c82e8a.png"
 							alt="imagen de bandera británica"
@@ -64,6 +64,7 @@ export default function RootLayout({ children }) {
 							className="uk-flag"
 						/>
 					</Link>
+
 				</div>
 
 				<Header />
