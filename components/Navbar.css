@@ -253,7 +253,7 @@ nav ul li span:hover {
 	}
 
 	.menu {
-		gap: 1rem !important;
+		gap: 2.5rem !important;
 		background: var(--lightpink);
 		border-radius: 10px;
 		box-shadow: 0 0 5px var(--pink);
@@ -271,7 +271,7 @@ nav ul li span:hover {
 	.menu li:last-child {
 		margin-bottom: 1rem;
 	}
-	
+
 	.menu li:first-child {
 		margin-top: 1rem;
 	}
