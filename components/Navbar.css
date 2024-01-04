@@ -267,4 +267,12 @@ nav ul li span:hover {
 		justify-content: flex-start;
 		width: 100%;
 	}
+
+	.menu li:last-child {
+		margin-bottom: 1rem;
+	}
+	
+	.menu li:first-child {
+		margin-top: 1rem;
+	}
 }
