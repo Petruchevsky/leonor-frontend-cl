@@ -48,13 +48,13 @@ export default function RootLayout({ children }) {
 						className="bookHeaderContainer"
 					>
 						<h2 className="bookHeader">
-							Click<span>Aquí</span>para reservar tu Nueva Hora o continuar con tu Tratamiento.
+							Haz click<span>Aquí</span>para reservar tu Nueva Hora o continuar con tu Tratamiento.
 						</h2>
 					</Link>
 
 					<Link
 						className="flagContainerUK"
-						href="https://leonor-frontend.vercel.app/"
+						href="https://www.leonorb-homeopath.uk/"
 					>
 						<Image
 							src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701951143/UK_Flag_1c46c82e8a.png"
