@@ -19,13 +19,29 @@ function Navbar() {
 
 	const handleClick = () => {
 		SetDropdownOpen(!dropdownOpen);
-		console.log(dropdownOpen);
 	};
 
 	useEffect(() => {
-		SetDropdownOpen(false)
-		setIsOpen(false); // Cerrar el menú cuando cambie la ruta
+		SetDropdownOpen(false);
+		setIsOpen(false);
 	}, [pathname, searchParams]);
+
+
+	useEffect(() => {
+		const closeMenu = (event) => {
+			
+			if (isOpen && !event.target.closest('.menu')) {
+				setIsOpen(false);
+				SetDropdownOpen(false);
+			}
+		};
+	
+		document.addEventListener('click', closeMenu);
+	
+		return () => {
+			document.removeEventListener('click', closeMenu);
+		};
+	}, [isOpen]);
 
 	return (
 		<nav className={`${isOpen ? "overlay" : ""}`}>
