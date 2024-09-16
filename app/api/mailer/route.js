@@ -29,7 +29,7 @@ export async function POST(request) {
                 <h2>${subject}</h2>
                 <h4><strong>${message}</strong></h4>
                 <br/><br/><br/><br/>
-                <h5>Este mensaje fue enviado por ${name} através del formulario de contacto de Leonor Berdichevsky Homeopata Online.</h5>
+                <h5>Este mensaje fue enviado por ${name} a través del formulario de contacto de Leonor Berdichevsky Homeopata Online.</h5>
             </div>
             <img src="https://res.cloudinary.com/dsvlzbctv/image/upload/v1701215920/pie_de_mail_25f6c9e49a.jpg" alt="imagen de pie de email" style="width:100%; position:absolute; bottom:0; box-shadow:0 0 10px white; margin:0 auto" />
         `,

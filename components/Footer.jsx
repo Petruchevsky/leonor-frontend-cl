@@ -98,7 +98,7 @@ async function Footer() {
 				</section>
 			</div>
 			<div className="developedBy">
-				<Link href="/">Desarrollado por MBA Digital</Link>
+				<Link href="https://www.moises-web.cl/">Desarrollado por Moisés Web</Link>
 				<Link href="/">Leonor Berdichevsky &copy;</Link>
 				<Link href="/privacy-police">Póliza de Privacidad</Link>
 			</div>
